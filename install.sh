@@ -1,48 +1,59 @@
-#!/bin/zsh
+#!/bin/env zsh
 
+# Installation script
+# by minikN
+# run ./install.sh with no arguments
+# to see the help menu.
+
+# Dotfiles to install
+# customize this array to
+# your liking.
 FILES=(
+	'.gtkrc-2.0'
 	'.xinitrc'
+	'.Xresources'
 	'.zshrc'
 	'.config/i3/config'
+	'.config/gtk-3.0/settings.ini'
 )
 
 # Change backup directory
 BACKUP="$HOME/.backup"
+
+# Do not change anything from here on out.
 BASEDIR=$(pwd)
 
-# Colors
 RED="\033[1;31m"
 GREEN="\033[1;32m"
 YELLOW="\033[1;33m"
-LGREEN="\033[1;92m"
-NOCOLOR="\033[0m"
 BOLD="\033[1m"
+RESET="\033[0m"
 
 if [[ $1 == "symlink" || $1 == "copy" ]]; then
 	if [[ $1 == "symlink" ]]; then
-		printf "${GREEN}INFO:${NOCOLOR} ${BOLD}SYMLINK${NOCOLOR} argument supplied. Starting symlink creation.\n"
+		printf "${GREEN}INFO:${RESET} ${BOLD}SYMLINK${RESET} argument supplied. Starting symlink creation.\n"
 	fi
 
 	if [[ $1 == "copy" ]]; then
-		printf "${GREEN}INFO:${NOCOLOR} ${BOLD}COPY${NOCOLOR} argument supplied. Starting copying files.\n"
+		printf "${GREEN}INFO:${RESET} ${BOLD}COPY${RESET} argument supplied. Starting copying files.\n"
 	fi
 
 	if ! [[ -e $BACKUP ]]; then
-		printf "${GREEN}INFO:${NOCOLOR} Creating temporary directory: ${YELLOW}$BACKUP${NOCOLOR}.\n"
+		printf "${GREEN}INFO:${RESET} Creating temporary directory: ${YELLOW}$BACKUP${RESET}.\n"
 		mkdir $BACKUP
 	fi
 
 	for FILE in $FILES; do
 		if [ -e $HOME/$FILE ]; then
 			if [ -e $BACKUP/$FILE ]; then
-				printf "${RED}ERROR:${NOCOLOR} Configuration file ${YELLOW}$BACKUP/$FILE${NOCOLOR} Already exists. Aborting.\n"
+				printf "${RED}ERROR:${RESET} Configuration file ${YELLOW}$BACKUP/$FILE${RESET} Already exists. Aborting.\n"
 				exit 1
 			fi
 		fi
 	done	
 	for FILE in $FILES; do
 		if [ -e $HOME/$FILE ]; then
-			printf "${GREEN}INFO:${NOCOLOR} Configuration found. Backing ${YELLOW}$FILE${NOCOLOR} up to: $BACKUP/$FILE.\n" 
+			printf "${GREEN}INFO:${RESET} Configuration found. Backing ${YELLOW}$FILE${RESET} up to: $BACKUP/$FILE.\n" 
 			
 			if [[ $FILE == *\/* ]]; then
 				mkdir -p $BACKUP/"${FILE%/*}"
@@ -56,59 +67,58 @@ if [[ $1 == "symlink" || $1 == "copy" ]]; then
 		fi
 
 		if [[ $1 == "copy" ]]; then
-			printf "${GREEN}INFO:${NOCOLOR} Copying file: ${RED}$FILE${NOCOLOR}\n"
+			printf "${GREEN}INFO:${RESET} Copying file: ${RED}$FILE${RESET}\n"
 			cp $BASEDIR/$FILE $HOME/$FILE
 		else
-			printf "${GREEN}INFO:${NOCOLOR} Creating symlink: ${RED}$FILE${NOCOLOR}\n"
+			printf "${GREEN}INFO:${RESET} Creating symlink: ${RED}$FILE${RESET}\n"
 			ln -sf $BASEDIR/$FILE $HOME/$FILE
 		fi
 
 	done
 
 	if [ -z "$(ls -A $BACKUP)" ]; then
-		printf "${GREEN}INFO:${NOCOLOR} No backups needed. Deleting temporary directory: ${YELLOW}$BACKUP${NOCOLOR}.\n" 
+		printf "${GREEN}INFO:${RESET} No backups needed. Deleting temporary directory: ${YELLOW}$BACKUP${RESET}.\n" 
 		rm -rf $BACKUP
 	else
-		printf "${GREEN}INFO:${NOCOLOR} Backups created in: ${YELLOW}$BACKUP${NOCOLOR}.\n"
+		printf "${GREEN}INFO:${RESET} Backups created in: ${YELLOW}$BACKUP${RESET}.\n"
 	fi
-	printf "${GREEN}INFO:${NOCOLOR} ${BOLD}Everything done. Cheers.${NOCOLOR}\n"
+	printf "${GREEN}INFO:${RESET} ${BOLD}Everything done. Cheers.${RESET}\n"
 
 elif [[ $1 == "clean" ]]; then
-	printf "${GREEN}INFO:${NOCOLOR} ${BOLD}CLEAN${NOCOLOR} argument supplied. Cleaning configuration and restoring backup.\n"	
+	printf "${GREEN}INFO:${RESET} ${BOLD}CLEAN${RESET} argument supplied. Cleaning configuration and restoring backup.\n"	
 	
 	for FILE in $FILES; do
 		if [ -e $HOME/$FILE ]; then
-			printf "${GREEN}INFO:${NOCOLOR} Deleting configuration: ${RED}$FILE${NOCOLOR}\n" 
+			printf "${GREEN}INFO:${RESET} Deleting configuration: ${RED}$FILE${RESET}\n" 
 			rm -rf  $HOME/$FILE
 		fi
 		if [ -e $BACKUP/$FILE ]; then
-			printf "${GREEN}INFO:${NOCOLOR} Found backup: ${YELLOW}$FILE${NOCOLOR}. Restoring.\n" 
+			printf "${GREEN}INFO:${RESET} Found backup: ${YELLOW}$FILE${RESET}. Restoring.\n" 
 			mv  $BACKUP/$FILE $HOME/$FILE
 		fi
 	done
 	if [ -d "$BACKUP" ]; then
 		if [ -z "$(ls -A $BACKUP)" ]; then
-			printf "${GREEN}INFO:${NOCOLOR} Backup directory empty. Deleting: ${YELLOW}$BACKUP${NOCOLOR}.\n" 
+			printf "${GREEN}INFO:${RESET} Backup directory empty. Deleting: ${YELLOW}$BACKUP${RESET}.\n" 
 			rm -rf $BACKUP
 		else
-			printf "${YELLOW}WARNING:${NOCOLOR} Backup directory not empty. Not deleting: ${YELLOW}$BACKUP${NOCOLOR}.\n"
+			printf "${YELLOW}WARNING:${RESET} Backup directory not empty. Not deleting: ${YELLOW}$BACKUP${RESET}.\n"
 		fi
 	fi
-	printf "${GREEN}INFO:${NOCOLOR} ${BOLD}Everything done. Cheers.${NOCOLOR}\n"
+	printf "${GREEN}INFO:${RESET} ${BOLD}Everything done. Cheers.${RESET}\n"
 else
 	printf "${RED}${BOLD}HELP / INFORMATION\n"
-	printf "${NOCOLOR}${BOLD}Any configuration files you already have will be backed up!${NOCOLOR}\n"
-	printf "Backup folder: ${YELLOW}$BACKUP${NOCOLOR}.\n"
-	printf "You can change the backup folder by editing the ${YELLOW}BACKUP${NOCOLOR} variable (line 10).\n"
-	printf "Be sure to set ${BOLD}chmod +x install.sh${NOCOLOR}\n\n"
-	printf "${BOLD}Usage:${NOCOLOR} ./install.sh [ARGUMENT]\n\n"
-	printf "${BOLD}Argument	Definition${NOCOLOR}\n"
-	printf "${NOCOLOR}${LGREEN}symlink		${NOCOLOR}Creates configuration files as symlinks.\n"
-	printf "${LGREEN}copy		${NOCOLOR}Copies configuration files directy.\n"
-	printf "${LGREEN}clean		${NOCOLOR}Deletes all files / symlinks and restores backup files (if available).\n"	
-	printf "${LGREEN}(no argument)	${NOCOLOR}Display this menu.\n"
+	printf "${RESET}${BOLD}Any configuration files you already have will be backed up!${RESET}\n"
+	printf "Backup folder: ${YELLOW}$BACKUP${RESET}.\n"
+	printf "You can change the backup folder by editing the ${YELLOW}BACKUP${RESET} variable (line 10).\n\n"
+	printf "${BOLD}Usage:${RESET} ./install.sh [ARGUMENT]\n\n"
+	printf "${BOLD}Argument	Definition${RESET}\n"
+	printf "${RESET}${GREEN}symlink		${RESET}Creates configuration files as symlinks.\n"
+	printf "${GREEN}copy		${RESET}Copies configuration files directly.\n"
+	printf "${GREEN}clean		${RESET}Deletes all files / symlinks and restores backup files (if available).\n"	
+	printf "${GREEN}(no argument)	${RESET}Display this menu.\n"
 	printf "\n"
-	printf "${RED}WARNING:${NOCOLOR} Running the ${BOLD}clean${NOCOLOR} argument without having run ${BOLD}symlink${NOCOLOR} or ${BOLD}copy${NOCOLOR} before will delete your default (yellow file names below) configuration files from ${YELLOW}$HOME${NOCOLOR}!\n"
+	printf "${RED}WARNING:${RESET} Running the ${BOLD}clean${RESET} argument without having run ${BOLD}symlink${RESET} or ${BOLD}copy${RESET} before will delete your default (yellow file names below) configuration files from ${YELLOW}$HOME${RESET}!\n"
 	printf "Only run the cleanup if you did run one of the other two before and want to return to your default setup.\n\n"
 	printf "What files will be worked with?\n${YELLOW}"
 	printf '%s\n' "${FILES[@]}"

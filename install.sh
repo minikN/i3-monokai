@@ -8,13 +8,18 @@
 # Dotfiles to install
 # customize this array to
 # your liking.
+#
+# All dotfiles are located in the 'files'
+# folder. 
 FILES=(
-	'.gtkrc-2.0'
 	'.xinitrc'
 	'.Xresources'
 	'.zshrc'
+	'.vimrc'
+	'.config/polybar'
 	'.config/i3/config'
-	'.config/gtk-3.0/settings.ini'
+	'.config/backgrounds'
+	'.config/scripts'
 )
 
 # Change backup directory
@@ -42,7 +47,9 @@ if [[ $1 == "symlink" || $1 == "copy" ]]; then
 		printf "${GREEN}INFO:${RESET} Creating temporary directory: ${YELLOW}$BACKUP${RESET}.\n"
 		mkdir $BACKUP
 	fi
-
+	
+	# Abort if backup folder exists and already has backup files
+	# otherwise we would override the files (no good).
 	for FILE in $FILES; do
 		if [ -e $HOME/$FILE ]; then
 			if [ -e $BACKUP/$FILE ]; then
@@ -50,7 +57,9 @@ if [[ $1 == "symlink" || $1 == "copy" ]]; then
 				exit 1
 			fi
 		fi
-	done	
+	done
+
+	# Installation	
 	for FILE in $FILES; do
 		if [ -e $HOME/$FILE ]; then
 			printf "${GREEN}INFO:${RESET} Configuration found. Backing ${YELLOW}$FILE${RESET} up to: $BACKUP/$FILE.\n" 
@@ -68,14 +77,23 @@ if [[ $1 == "symlink" || $1 == "copy" ]]; then
 
 		if [[ $1 == "copy" ]]; then
 			printf "${GREEN}INFO:${RESET} Copying file: ${RED}$FILE${RESET}\n"
-			cp $BASEDIR/$FILE $HOME/$FILE
+			cp -r  $BASEDIR/files/$FILE $HOME/$FILE
 		else
 			printf "${GREEN}INFO:${RESET} Creating symlink: ${RED}$FILE${RESET}\n"
-			ln -sf $BASEDIR/$FILE $HOME/$FILE
+			ln -sf $BASEDIR/files/$FILE $HOME/$FILE
 		fi
 
 	done
+	
+	# Granting execute permissons
+	for filename in $HOME/.config/scripts/*.sh; do
+		if [[ -e $filename ]]; then
+			printf "${YELLOW}SCRIPT:${RESET} Granting execute permissions: ${RED}$filename${RESET}.\n" 
+			chmod +x $filename
+		fi
+	done
 
+	# Handling backup folder post install
 	if [ -z "$(ls -A $BACKUP)" ]; then
 		printf "${GREEN}INFO:${RESET} No backups needed. Deleting temporary directory: ${YELLOW}$BACKUP${RESET}.\n" 
 		rm -rf $BACKUP

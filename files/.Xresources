@@ -1,0 +1,70 @@
+st.termname:     	st-256color
+st.shell:        	/bin/zsh
+
+st.font:              	Misc Termsyn:pixelsize=13:antialias=false:autohint:false;
+st.borderpx:          	10
+st.cursorshape:       	1
+st.cursorthickness:   	2
+st.cursorblinkstyle:  	0
+st.cursorblinkontype: 	1
+st.bold_font:         	1
+st.xfps:              	120
+st.actionfps:         	30
+st.mouseScrollLines:  	1
+st.chscale:           	1.0
+st.cwscale:           	1.0
+st.blinktimeout:      	800
+st.bellvolume:        	0
+st.prompt_char:       	$
+st.imstyle:           	root
+st.opacity:		255
+
+! special
+*.foreground:   #f7f1ff
+*.background:   #222222
+*.cursorColor:  #f7f1ff
+*.contrast:	#69676c
+
+! black
+*.color8:       #222222
+*.color0:       #69676c
+
+! red
+*.color9:       #fc618d
+*.color1:       #fc618d
+
+! green
+*.color10:      #7bd88f
+*.color2:       #7bd88f
+
+! yellow
+*.color11:      #fce566
+*.color3:       #fce566
+
+! blue
+*.color12:      #fd9353
+*.color4:       #fd9353
+
+! magenta
+*.color13:      #948ae3
+*.color5:       #948ae3
+
+! cyan
+*.color14:      #5ad4e6
+*.color6:       #5ad4e6
+
+! white
+*.color15:      #f7f1ff
+*.color7:       #f7f1ff
+ 
+! font settings
+Xft.autohint:	0
+Xft.lcdfilter:	lcddefault
+Xft.hintstyle:	hintslight
+Xft.hinting:	1
+Xft.antialias:	1
+Xft.rgba:	rgb
+
+! Rofi
+rofi.font:	Misc Termsyn 12
+rofi.theme:	monokai.rasi

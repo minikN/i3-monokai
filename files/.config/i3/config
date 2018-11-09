@@ -1,0 +1,240 @@
+# ------------------------- GLOBAL VARS  -------------------------
+set $mod 			Mod4
+set $alt 			Mod1
+font 				pango:Misc Termsyn 13
+set $TERMINAL 			xst
+set $CALC_FONT			"pango:mono:pixelsize=18"
+set $BM_FONT	 		"Misc Termsyn:pixelsize=13"
+set $SEARCH 			"rofi -show run"
+
+set $SCRIPTS			$HOME/.config/scripts
+
+
+
+
+
+# ------------------------- COMMON  -------------------------
+# General settings
+new_window 			1pixel
+default_border 			pixel 4
+default_floating_border 	none
+hide_edge_borders 		both
+
+# start a terminal
+bindsym $mod+Return 		exec $TERMINAL -f $BM_FONT 
+
+# kill focused window
+bindsym $mod+Shift+q 		kill
+
+# reload the configuration file
+bindsym $mod+Shift+c 		reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r 		restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e 		exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# Set XRandR settings
+exec xrandr --output DP-0 --primary --mode 2560x1440 --pos 0x0 --rotate normal --output DVI-D-0 --off --output HDMI-1 --off --output DP-1 --off --output HDMI-0 --mode 2560x1440 --pos 2560x0 --rotate normal
+
+
+
+
+
+# ------------------------- COLORS  -------------------------
+# using ~/.Xresources
+set_from_resource 		$fg-color 	i3wm.foreground
+set_from_resource 		$bg-color 	i3wm.background
+set_from_resource 		$contrast-color i3wm.contrast
+set_from_resource 		$red-color 	i3wm.color1
+set_from_resource 		$green-color 	i3wm.color2
+set_from_resource 		$yellow-color 	i3wm.color3
+set_from_resource 		$orange-color 	i3wm.color4
+set_from_resource 		$purple-color 	i3wm.color5
+set_from_resource 		$cyan-color 	i3wm.color6
+
+# class                 	border  	backgr. 	text    	indicator 	child_border
+client.focused          	$contrast-color	$bg-color	$yellow-color	$contrast-color	$contrast-color
+client.focused_inactive         $bg-color	$bg-color	$yellow-color	$bg-color	$bg-color
+client.unfocused          	$bg-color	$bg-color	$contrast-color	$bg-color	$bg-color
+client.urgent         		$red-color	$bg-color	$red-color	$red-color	$red-color
+client.placeholder          	$bg-color	$bg-color	$yellow-color	$bg-color	$bg-color
+client.background       	$fg-color
+
+
+
+
+
+# ------------------------- NAVIGATION  -------------------------
+# change focus
+bindsym $mod+j 			focus left
+bindsym $mod+k 			focus down
+bindsym $mod+l 			focus up
+bindsym $mod+odiaeresis 	focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left 		focus left
+bindsym $mod+Down 		focus down
+bindsym $mod+Up 		focus up
+bindsym $mod+Right 		focus right
+
+# move focused window
+bindsym $mod+Shift+j 		move left
+bindsym $mod+Shift+k 		move down
+bindsym $mod+Shift+l 		move up
+bindsym $mod+Shift+odiaeresis 	move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left 	move left
+bindsym $mod+Shift+Down 	move down
+bindsym $mod+Shift+Up 		move up
+bindsym $mod+Shift+Right 	move right
+
+# split in horizontal orientation
+bindsym $mod+h 			split h
+
+# split in vertical orientation
+bindsym $mod+v 			split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f 			fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s 			layout stacking
+bindsym $mod+w 			layout tabbed
+bindsym $mod+e 			layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space 	floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space 		focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a 			focus parent
+
+# focus the child container
+#bindsym $mod+d focus child
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier 		$mod
+
+
+
+
+
+# ------------------------- WORKSPACES -------------------------
+# define outputs
+set $output1 			"DP-0"
+set $output2 			"HDMI-0"
+
+# Define names for default workspaces for which we configure key bindings later on.
+# We use variables to avoid repeating the names in multiple places.
+set $ws1 			"CHROME"
+set $ws2 			"CODE"
+set $ws3 			"3"
+set $ws4 			"4"
+set $ws5 			"5"
+set $ws6 			"6"
+set $ws7 			"7"
+set $ws8 			"8"
+set $ws9 			"FIREFOX"
+set $ws10 			"MUSIC"
+
+# switch to workspace
+bindsym $mod+1			workspace $ws1
+bindsym $mod+2			workspace $ws2
+bindsym $mod+3			workspace $ws3
+bindsym $mod+4			workspace $ws4
+bindsym $mod+5 			workspace $ws5
+bindsym $mod+6 			workspace $ws6
+bindsym $mod+7		 	workspace $ws7
+bindsym $mod+8 			workspace $ws8
+bindsym $mod+9 			workspace $ws9
+bindsym $mod+0 			workspace $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 		move container to workspace $ws1
+bindsym $mod+Shift+2 		move container to workspace $ws2
+bindsym $mod+Shift+3 		move container to workspace $ws3
+bindsym $mod+Shift+4 		move container to workspace $ws4
+bindsym $mod+Shift+5 		move container to workspace $ws5
+bindsym $mod+Shift+6 		move container to workspace $ws6
+bindsym $mod+Shift+7 		move container to workspace $ws7
+bindsym $mod+Shift+8 		move container to workspace $ws8
+bindsym $mod+Shift+9 		move container to workspace $ws9
+bindsym $mod+Shift+0 		move container to workspace $ws10
+
+# assign applications to workspaces
+assign [class="Chromium"] 	$ws1
+assign [class="Firefox"] 	$ws9
+
+# assign workspaces to outputs
+workspace $ws1 			output $output1 # Chrome
+workspace $ws2 			output $output2 # Terminals
+workspace $ws9 			output $output1 # Firefox
+
+
+
+
+
+# ------------------------- GAPS -------------------------
+gaps inner 15
+gaps outer 15
+
+bindsym $mod+o			gaps inner current plus 5
+bindsym $mod+shift+o		gaps inner current minus 5
+
+bindsym $mod+p			gaps outer current plus 5
+bindsym $mod+shift+p		gaps outer current minus 5
+
+bindsym $mod+BackSpace		gaps inner all set 15; gaps outer all set 15
+bindsym $mod+shift+BackSpace	gaps inner all set 0; gaps outer all set 0
+
+
+
+
+
+# ------------------------- RESIZE -------------------------
+bindsym $mod+KP_Left 		resize shrink width 10 px or 10 ppt
+bindsym $mod+KP_Down 		resize grow height 10 px or 10 ppt
+bindsym $mod+KP_Up 		resize shrink height 10 px or 10 ppt
+bindsym $mod+KP_Right 		resize grow width 10 px or 10 ppt
+
+
+
+
+
+# ------------------------- AUTOSTART  -------------------------
+exec_always --no-startup-id 	$HOME/.config/polybar/launch.sh
+exec --no-startup-id 		$SCRIPTS/10-background.sh
+exec --no-startup-id 		$SCRIPTS/20-network-shares.sh
+exec --no-startup-id 		chromium
+
+
+
+
+
+# ------------------------- DROPDOWNS -------------------------
+# Config window
+for_window [instance="config"] floating enable 
+for_window [instance="config"] resize set 1000 1000
+for_window [instance="config"] move scratchpad
+exec	 			$TERMINAL -f $BM_FONT -n config -e vim
+bindsym F1			[instance="config"] scratchpad show; [instance="config"] move position center 
+
+# Calculator
+for_window [instance="calculator"] floating enable 
+for_window [instance="calculator"] resize set 300 300
+for_window [instance="calculator"] move position center
+for_window [instance="calculator"] move scratchpad
+for_window [instance="calculator"] border pixel 5
+exec 				$TERMINAL -f $CALC_FONT -n calculator -e qalc
+bindsym XF86Calculator		[instance="calculator"] scratchpad show; [instance="calculator"] move position center
+
+
+
+
+
+# ------------------------- APPLICATIONS  -------------------------
+bindsym $mod+$alt+space 	exec $SEARCH 
+bindsym $mod+$alt+L 		exec i3lock

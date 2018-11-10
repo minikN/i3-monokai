@@ -1,0 +1,45 @@
+! Base16 Monokai Pro (Octagon)
+! Scheme: Wimer Hazenberg (https://www.monokai.nl)
+
+#define base00 #282a3a
+#define base01 #4f525f
+#define base02 #767a83
+#define base03 #9ca2a8
+#define base04 #c3cacc
+#define base05 #eaf2f1
+#define base06 #f5f9f8
+#define base07 #ffffff
+#define base08 #ff657a
+#define base09 #161821
+#define base0A #ffd76d
+#define base0B #bad761
+#define base0C #9cd1bb
+#define base0D #c39ac9
+#define base0E #ff9b5e
+#define base0F #1e1f2b
+
+*foreground:   base05
+#ifdef background_opacity
+*background:   [background_opacity]base00
+#else
+*background:   base00
+#endif
+*cursorColor:  base05
+
+*color0:       base00
+*color1:       base08
+*color2:       base0B
+*color3:       base0A
+*color4:       base0D
+*color5:       base0E
+*color6:       base0C
+*color7:       base05
+
+*color8:       base03
+*color9:       base09
+*color10:      base01
+*color11:      base02
+*color12:      base04
+*color13:      base06
+*color14:      base0F
+*color15:      base07

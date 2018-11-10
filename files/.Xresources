@@ -19,44 +19,9 @@ st.prompt_char:       	$
 st.imstyle:           	root
 st.opacity:		255
 
-! special
-*.foreground:   #f7f1ff
-*.background:   #222222
-*.cursorColor:  #f7f1ff
-*.contrast:	#69676c
+#include "builds/i3-monokai/files/.config/Xresources/COLORS"
+*.contrast: base02
 
-! black
-*.color8:       #222222
-*.color0:       #69676c
-
-! red
-*.color9:       #fc618d
-*.color1:       #fc618d
-
-! green
-*.color10:      #7bd88f
-*.color2:       #7bd88f
-
-! yellow
-*.color11:      #fce566
-*.color3:       #fce566
-
-! blue
-*.color12:      #fd9353
-*.color4:       #fd9353
-
-! magenta
-*.color13:      #948ae3
-*.color5:       #948ae3
-
-! cyan
-*.color14:      #5ad4e6
-*.color6:       #5ad4e6
-
-! white
-*.color15:      #f7f1ff
-*.color7:       #f7f1ff
- 
 ! font settings
 Xft.autohint:	0
 Xft.lcdfilter:	lcddefault

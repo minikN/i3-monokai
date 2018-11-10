@@ -20,6 +20,7 @@ FILES=(
 	'.config/i3/config'
 	'.config/backgrounds'
 	'.config/scripts'
+	'.config/Xresources'
 )
 
 # Change backup directory

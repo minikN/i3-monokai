@@ -1,0 +1,45 @@
+! Base16 Monokai Pro
+! Scheme: Wimer Hazenberg (https://www.monokai.nl)
+
+#define base00 #2d2a2e
+#define base01 #565457
+#define base02 #807e80
+#define base03 #a9a8a8
+#define base04 #d3d2d1
+#define base05 #fcfcfa
+#define base06 #fefefd
+#define base07 #ffffff
+#define base08 #ff6188
+#define base09 #19181a
+#define base0A #ffd866
+#define base0B #a9dc76
+#define base0C #78dce8
+#define base0D #ab9df2
+#define base0E #fc9867
+#define base0F #221f22
+
+*foreground:   base05
+#ifdef background_opacity
+*background:   [background_opacity]base00
+#else
+*background:   base00
+#endif
+*cursorColor:  base05
+
+*color0:       base00
+*color1:       base08
+*color2:       base0B
+*color3:       base0A
+*color4:       base0D
+*color5:       base0E
+*color6:       base0C
+*color7:       base05
+
+*color8:       base03
+*color9:       base09
+*color10:      base01
+*color11:      base02
+*color12:      base04
+*color13:      base06
+*color14:      base0F
+*color15:      base07

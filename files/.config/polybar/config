@@ -6,13 +6,13 @@ margin-bottom = 0
 [color]
 white = ${xrdb:*.foreground:#ffffff}
 base = ${xrdb:*.background:#000000}
-orange = ${xrdb:*.color4:#ffffff}
-orange2 = ${xrdb:*.color4:#ffffff}
-purple = ${xrdb:*.color5:#ffffff}
+orange = ${xrdb:*.color5:#ffffff}
+orange2 = ${xrdb:*.color5:#ffffff}
+purple = ${xrdb:*.color16:#ffffff}
 red = ${xrdb:*.color1:#ffffff}
 yellow = ${xrdb:*.color3:#ffffff}
 cyan = ${xrdb:*.color6:#ffffff}
-cyan2 = ${xrdb:*.color6:#ffffff}
+cyan2 = ${xrdb:*.color4:#ffffff}
 contrast = ${xrdb:*.contrast:#ffffff}
 
 [bar/left]

@@ -1,0 +1,45 @@
+! Base16 Monokai Pro (Spectrum)
+! Scheme: Wimer Hazenberg (https://www.monokai.nl)
+
+#define base00 #222222
+#define base01 #4d4b4e
+#define base02 #77757a
+#define base03 #a29ea7
+#define base04 #ccc8d3
+#define base05 #f7f1ff
+#define base06 #fbf8ff
+#define base07 #ffffff
+#define base08 #fc618d
+#define base09 #191919
+#define base0A #fce566
+#define base0B #7bd88f
+#define base0C #5ad4e6
+#define base0D #948ae3
+#define base0E #fd9353
+#define base0F #1e1e1e
+
+*foreground:   base05
+#ifdef background_opacity
+*background:   [background_opacity]base00
+#else
+*background:   base00
+#endif
+*cursorColor:  base05
+
+*color0:       base00
+*color1:       base08
+*color2:       base0B
+*color3:       base0A
+*color4:       base0D
+*color5:       base0E
+*color6:       base0C
+*color7:       base05
+
+*color8:       base03
+*color9:       base09
+*color10:      base01
+*color11:      base02
+*color12:      base04
+*color13:      base06
+*color14:      base0F
+*color15:      base07

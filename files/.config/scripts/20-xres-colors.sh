@@ -1,31 +1,31 @@
 #!/bin/env zsh
 
-# Simple script to switch between color palettes
+# Simple script to switch between color palettes.
+# It will swap the color palette in .Xresources
+# plus the vim colorscheme. If you don't
+# want the vim scheme to be changed, 
+# delete the vim related section.
 #
 # by minikN
 
 # Setting the base dir
-BASEDIR=$HOME/.config/backgrounds
+BASEDIR=$HOME/.config/Xresources
 
-# Setting a random number between 1 and the number of directories inside 'single'
-FOLDERS=$((( RANDOM % `find $BASEDIR/single/* -maxdepth 0 -type d | wc -l`) + 1))
+# Getting all available color palettes
+# You may add your own palette. It has to be in .Xresources format.
+# Take a look at https://github.com/chriskempson/base16-xresources
+THEME=$(echo -e "`ls $BASEDIR -I COLORS | sed -e 's:\.[^./]*$::'`" | rofi -dmenu -i -p "Choose Colorscheme")
+if ! [[ -z "$THEME" ]]; then
+	ln -sf $BASEDIR/$THEME.Xresources $BASEDIR/COLORS	
+	#cat "$BASEDIR/$THEME.Xresources" > $BASEDIR/COLORS
+	xrdb -load $HOME/.Xresources
 
-# Getting random number between 1 and 2
-# 1 = two single wallpapers
-# 2 = one dual wallpaper
-if [[ $((( RANDOM % 2 ) +1 )) == 1  ]]; then
-	COUNTER=1
+	# VIM RELATED
+	sed -i '/colorscheme/d' $HOME/.vimrc
+	sed -i '$d' $HOME/.vimrc
+	echo "\ncolorscheme ${THEME%"-256"}" >> $HOME/.vimrc
+	# DELETE UNTIL HERE IF YOU DON'T WANT ANY CHANGES TO YOUR VIMRC.
 
-	# looping thru each folder inside 'single'
-	# until we find the folder matching $FOLDERS
-	# (basically randmonly selecting a folder)
-	for dir in $BASEDIR/single/*; do
-		if [[ $FOLDERS == $COUNTER ]]; then
-			feh  --recursive --randomize --bg-fill $dir/*
-			exit 0
-		fi
-		COUNTER=$((COUNTER + 1))
-	done
-else
-	feh --recursive --randomize --bg-scale --no-xinerama $BASEDIR/dual/*
+	# Restarting i3
+	i3-msg restart 
 fi

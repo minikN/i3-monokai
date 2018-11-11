@@ -64,6 +64,12 @@ client.background       	$fg-color
 
 
 
+# ------------------------- SETTINGS  -------------------------
+bindsym $mod+shift+s		exec $SCRIPTS/20-xres-colors.sh
+
+
+
+
 # ------------------------- NAVIGATION  -------------------------
 # change focus
 bindsym $mod+j 			focus left

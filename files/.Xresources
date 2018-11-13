@@ -1,7 +1,22 @@
-st.termname:     	st-256color
-st.shell:        	/bin/zsh
+! -------------- DEFINITIONS --------------
+#define FONT 			Misc Termsyn
+#define SIZE 			10
 
-st.font:              	Misc Termsyn:pixelsize=13:antialias=false:autohint:false;
+#define AA 				0
+#define AHINT 			0
+#define LCDF 			lcddefault
+#define HINTS 			hintslight
+#define HINT 			0
+#define RGBA 			rgba
+
+
+
+
+
+! -------------- TERMINAL --------------
+st.termname:     		st-256color
+st.shell:        		/bin/zsh
+st.font:              	FONT:pixelsize=SIZE:antialias=AA:autohint=AHINT;
 st.borderpx:          	10
 st.cursorshape:       	1
 st.cursorthickness:   	2
@@ -17,19 +32,52 @@ st.blinktimeout:      	800
 st.bellvolume:        	0
 st.prompt_char:       	$
 st.imstyle:           	root
-st.opacity:		255
+st.opacity:				255
 
-#include "builds/i3-monokai/files/.config/Xresources/COLORS"
-*.contrast: base02
 
-! font settings
-Xft.autohint:	0
-Xft.lcdfilter:	lcddefault
-Xft.hintstyle:	hintslight
-Xft.hinting:	1
-Xft.antialias:	1
-Xft.rgba:	rgb
 
-! Rofi
-rofi.font:	Misc Termsyn 12
-rofi.theme:	monokai.rasi
+
+
+! -------------- COLOR IMPORT --------------
+#include 				".config/Xresources/COLORS"
+*.contrast: 			base02
+
+
+
+
+
+! -------------- GLOBAL SETTINGS --------------
+global.font:			FONT SIZE
+global.rofifont:		FONT 8
+global.bg: 				base00
+global.grey-dark: 		base01
+global.grey: 			base02
+global.grey-bright: 	base03
+global.fg-dark: 		base04 
+global.fg: 				base05
+global.fg-bright: 		base06
+global.fg-white: 		base07
+
+global.contrast:		base02
+global.contrast-dark:	base0F
+global.contrast-darker:	base09
+global.accent:			baseCC
+
+global.red:				base08
+global.yellow:			base0A
+global.green:			base0B
+global.cyan:			base0C
+global.purple:			base0D
+global.orange:			base0E
+
+
+
+
+
+! -------------- GLOBAL SETTINGS --------------
+Xft.autohint:			AHINT
+Xft.lcdfilter:			LCDF
+Xft.hintstyle:			HINTS
+Xft.hinting:			HINT
+Xft.antialias:			AA
+Xft.rgba:				RGBA

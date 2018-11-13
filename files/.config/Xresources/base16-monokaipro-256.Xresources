@@ -2,10 +2,10 @@
 ! Scheme: Wimer Hazenberg (https://www.monokai.nl)
 
 #define base00 #2d2a2e
-#define base01 #565457
-#define base02 #807e80
-#define base03 #a9a8a8
-#define base04 #d3d2d1
+#define base01 #403e41
+#define base02 #5b595c
+#define base03 #727072
+#define base04 #939293
 #define base05 #fcfcfa
 #define base06 #fefefd
 #define base07 #ffffff
@@ -17,6 +17,7 @@
 #define base0D #ab9df2
 #define base0E #fc9867
 #define base0F #221f22
+#define baseCC #403e41
 
 *foreground:   base05
 #ifdef background_opacity

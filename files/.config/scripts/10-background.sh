@@ -1,4 +1,4 @@
-#!/bin/env zsh
+#!/bin/env bash
 
 # Simple script to randomize between dual monitor
 # wallpapers and two single monitor wallpapers.

@@ -5,7 +5,7 @@ font 				pango:Misc Termsyn 13
 set $TERMINAL 			xst
 set $CALC_FONT			"pango:mono:pixelsize=18"
 set $BM_FONT	 		"Misc Termsyn:pixelsize=13"
-set $SEARCH 			"rofi -show run"
+set $SEARCH 			"rofi -show run -theme monokai"
 
 set $SCRIPTS			$HOME/.config/scripts
 
@@ -65,8 +65,7 @@ client.background       	$fg-color
 
 
 # ------------------------- SETTINGS  -------------------------
-bindsym $mod+shift+s		exec $SCRIPTS/20-xres-colors.sh
-
+bindsym $mod+shift+s		exec $SCRIPTS/20-xres-colors.sh monokai
 
 
 

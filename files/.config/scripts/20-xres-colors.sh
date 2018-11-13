@@ -1,4 +1,4 @@
-#!/bin/env zsh
+#!/bin/env bash
 
 # Simple script to switch between color palettes.
 # It will swap the color palette in .Xresources
@@ -10,22 +10,25 @@
 
 # Setting the base dir
 BASEDIR=$HOME/.config/Xresources
+SCRIPTS=$HOME/.config/scripts
 
 # Getting all available color palettes
 # You may add your own palette. It has to be in .Xresources format.
 # Take a look at https://github.com/chriskempson/base16-xresources
-THEME=$(echo -e "`ls $BASEDIR -I COLORS | sed -e 's:\.[^./]*$::'`" | rofi -dmenu -i -p "Choose Colorscheme")
-if ! [[ -z "$THEME" ]]; then
-	ln -sf $BASEDIR/$THEME.Xresources $BASEDIR/COLORS	
-	#cat "$BASEDIR/$THEME.Xresources" > $BASEDIR/COLORS
-	xrdb -load $HOME/.Xresources
+THEME=$((ls $BASEDIR -I COLORS | sed -e 's:\.[^./]*$::') | rofi -dmenu -p "Choose Colorscheme" -theme $1)
 
-	# VIM RELATED
-	sed -i '/colorscheme/d' $HOME/.vimrc
-	sed -i '$d' $HOME/.vimrc
-	echo "\ncolorscheme ${THEME%"-256"}" >> $HOME/.vimrc
-	# DELETE UNTIL HERE IF YOU DON'T WANT ANY CHANGES TO YOUR VIMRC.
+# Exit if no theme was selcted
+[[ -z "$THEME" ]] && exit
 
-	# Restarting i3
-	i3-msg restart 
-fi
+ln -sf $BASEDIR/$THEME.Xresources $BASEDIR/COLORS	
+xrdb -load $HOME/.Xresources
+
+# rofi
+sh "$SCRIPTS/21-xres-rofi.sh"
+
+# VIM RELATED
+sed -i --follow-symlinks "/colorscheme/c\colorscheme ${THEME%'-256'}" $HOME/.vimrc
+source $HOME/.vimrc
+
+# Restarting i3
+i3-msg restart 

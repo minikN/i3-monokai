@@ -1,0 +1,6 @@
+[submodule "files/.vim/bundle/MonokaiPro-vim-colorscheme"]
+	path = files/.vim/bundle/MonokaiPro-vim-colorscheme
+	url = https://github.com/minikN/MonokaiPro-vim-colorscheme.git
+[submodule "files/.vim/bundle/Vundle.vim"]
+	path = files/.vim/bundle/Vundle.vim
+	url = https://github.com/VundleVim/Vundle.vim.git

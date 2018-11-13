@@ -1,4 +1,4 @@
-#!/bin/env zsh
+#!/bin/env bash
 
 # Installation script
 # by minikN
@@ -11,16 +11,18 @@
 #
 # All dotfiles are located in the 'files'
 # folder. 
-FILES=(
-	'.xinitrc'
-	'.Xresources'
-	'.zshrc'
-	'.vimrc'
-	'.config/polybar'
-	'.config/i3/config'
-	'.config/backgrounds'
-	'.config/scripts'
-	'.config/Xresources'
+declare -a FILES=(
+	".xinitrc"
+	".Xresources"
+	".zshrc"
+	".vimrc"
+	".vim"
+	".config/polybar"
+	".config/i3/config"
+	".config/backgrounds"
+	".config/scripts"
+	".config/rofi"
+	".config/Xresources"
 )
 
 # Change backup directory
@@ -51,7 +53,8 @@ if [[ $1 == "symlink" || $1 == "copy" ]]; then
 	
 	# Abort if backup folder exists and already has backup files
 	# otherwise we would override the files (no good).
-	for FILE in $FILES; do
+	for FILE in "${FILES[@]}"
+	do
 		if [ -e $HOME/$FILE ]; then
 			if [ -e $BACKUP/$FILE ]; then
 				printf "${RED}ERROR:${RESET} Configuration file ${YELLOW}$BACKUP/$FILE${RESET} Already exists. Aborting.\n"
@@ -61,7 +64,8 @@ if [[ $1 == "symlink" || $1 == "copy" ]]; then
 	done
 
 	# Installation	
-	for FILE in $FILES; do
+	for FILE in "${FILES[@]}"
+	do
 		if [ -e $HOME/$FILE ]; then
 			printf "${GREEN}INFO:${RESET} Configuration found. Backing ${YELLOW}$FILE${RESET} up to: $BACKUP/$FILE.\n" 
 			
@@ -83,11 +87,11 @@ if [[ $1 == "symlink" || $1 == "copy" ]]; then
 			printf "${GREEN}INFO:${RESET} Creating symlink: ${RED}$FILE${RESET}\n"
 			ln -sf $BASEDIR/files/$FILE $HOME/$FILE
 		fi
-
 	done
 	
 	# Granting execute permissons
-	for filename in $HOME/.config/scripts/*.sh; do
+	for filename in $HOME/.config/scripts/*.sh
+	do
 		if [[ -e $filename ]]; then
 			printf "${YELLOW}SCRIPT:${RESET} Granting execute permissions: ${RED}$filename${RESET}.\n" 
 			chmod +x $filename
@@ -106,7 +110,8 @@ if [[ $1 == "symlink" || $1 == "copy" ]]; then
 elif [[ $1 == "clean" ]]; then
 	printf "${GREEN}INFO:${RESET} ${BOLD}CLEAN${RESET} argument supplied. Cleaning configuration and restoring backup.\n"	
 	
-	for FILE in $FILES; do
+	for FILE in "${FILES[@]}"
+	do
 		if [ -e $HOME/$FILE ]; then
 			printf "${GREEN}INFO:${RESET} Deleting configuration: ${RED}$FILE${RESET}\n" 
 			rm -rf  $HOME/$FILE

@@ -3,24 +3,25 @@
 /* These variables get changed automatically through
  * the shell script.
  */
-bg: #2d2a2e;
-grey: #5b595c;
-grey-dark: #403e41;
-grey-bright: #727072;
-fg: #fcfcfa;
-fg-dark: #939293;
-fg-bright: #fefefd;
+bg: #2c2525;
+grey: #5b5353;
+grey-dark: #403838;
+grey-bright: #72696a;
+fg: #fff1f3;
+fg-dark: #948a8b;
+fg-bright: #fff8f9;
 fg-white: #ffffff;
-contrast: #5b595c;
-contrast-dark: #221f22;
-contrast-darker: #19181a;
-red: #ff6188;
-yellow: #ffd866;
-green: #a9dc76;
-purple: #ab9df2;
-orange: #fc9867;
-cyan: #78dce8;
-accent: #403e41;
+contrast: #5b5353;
+contrast-dark: #211c1c;
+contrast-darker: #191515;
+red: #fd6883;
+yellow: #f9cc6c;
+green: #adda78;
+purple: #a8a9eb;
+orange: #f38d70;
+cyan: #85dacc;
+accent: #403838;
+highlight: bold #f9cc6c;
 typeface: "Misc Termsyn 8";
 
     spacing:                     2;

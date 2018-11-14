@@ -1,5 +1,4 @@
 # Yairs
-***
 ![alt text](notes/1.png "Yairs")
 
 **Yairs** [(Y)et (a)nother (i)3 (r)ice (s)etup] is what I call my dotfiles repository. It is a working process - basically it will probably never be finished. However, everone is welcome to use it fully or partially.

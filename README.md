@@ -9,7 +9,6 @@ yairs is a i3 setup using bitmap fonts based around the [Monokai Pro](https://ww
 + a 256-color terminal (I use [xst](https://github.com/gnotclub/xst))
 + polybar
 + Rofi
-
 + feh
 + gawk/awk
 + sed

@@ -80,3 +80,4 @@ In addition it will apply the changes on the fly by echoing the given color pale
 are persistent.
 
 ![alt text](notes/colorchange.gif "Color Palette Switch")
+(Please not that for some reason the colors are not being reflected accurately in the GIF, sry.)

@@ -8,22 +8,22 @@ yairs is a i3 setup using bitmap fonts based around the [Monokai Pro](https://ww
 + i3-gaps
 + polybar
 + Rofi
++ feh
 + a 256-color terminal (I use [xst](https://github.com/gnotclub/xst))
++ and more (will add soon)
 
 #### Fonts
 + Misc Termsyn
 + Wucon Siji
-+ Liberation (going to change)
++ Inconsolata
 
 #### Synopsis
-***
 I use i3-gaps as my wm and polybar as my bar (I will likely change the current polybar setup in the future).
 One of Yairs' feature is, that there is (at the moment) only one point of entry in terms of configuration: `.Xresources`.
 On top of that I have written easy-to use installation and maintenance shell scripts. The user is able to change 
 between the many Monokai Pro flavours on the fly using the `$mod+shift+s` shortcut.
 
 #### Installation
-***
 Clone the repo
 
     cd ~
@@ -65,4 +65,18 @@ files. This makes it easy to update the repo.
 
 Reverts everything back to normal. In case it backed up some file, it will restore them as well.
 
-More to come.
+#### Switching Monokai Pro flavours
+I've created some simple bash scripts to change all the different Monokai Pro flavours on the fly. The default i3 shortcut
+to bring up the rofi menu is `$mod+shift+s`. I suggest choosing one of thr 256-color variants (if you're using a 256-color
+terminal). Switching to a different theme will load the given color palette for:
+
+`.Xresources`
+`i3`
+`Rofi`
+`Vim`
+`Sublime Text`
+
+In addition it will apply the changes on the fly by echoing the given color palette to every tty inside `/dev/pts/`. The changes
+are persistent.
+
+![alt text](notes/colorchange.gif "Color Palette Switch")

@@ -23,8 +23,10 @@ THEME=$((ls $BASEDIR -I COLORS | sed -e 's:\.[^./]*$::') | rofi -dmenu -p "Choos
 ln -sf $BASEDIR/$THEME.Xresources $BASEDIR/COLORS	
 xrdb -load $HOME/.Xresources
 
-# rofi
+# rofi, terminals
 sh "$SCRIPTS/21-xres-rofi.sh"
+sh "$SCRIPTS/22-xres-terminal.sh"
+sh "$SCRIPTS/23-xres-sublime.sh" $THEME
 
 # VIM RELATED
 sed -i --follow-symlinks "/colorscheme/c\colorscheme ${THEME%'-256'}" $HOME/.vimrc

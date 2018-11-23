@@ -1,13 +1,13 @@
 # ------------------------- GLOBAL VARS  -------------------------
-set $mod 			Mod4
-set $alt 			Mod1
-font 				pango:Misc Termsyn 13
-set $TERMINAL 			xst
-set $CALC_FONT			"pango:mono:pixelsize=18"
-set $BM_FONT	 		"Misc Termsyn:pixelsize=13"
-set $SEARCH 			"rofi -show run -color-enabled -theme spotlight"
+set $mod 					Mod4
+set $alt 					Mod1
+font 						pango:Misc Termsyn 13
+set_from_resource			$TERMINAL	st.title
+set_from_resource			$TERM_FONT  st.font
+set_from_resource			$CALC_FONT  st.font
+set $SEARCH 				"rofi -show drun -show-icons true -theme spotlight"
 
-set $SCRIPTS			$HOME/.config/scripts
+set $SCRIPTS				$HOME/.config/scripts
 
 
 
@@ -15,13 +15,13 @@ set $SCRIPTS			$HOME/.config/scripts
 
 # ------------------------- COMMON  -------------------------
 # General settings
-new_window 			1pixel
-default_border 			pixel 4
+new_window 					1pixel
+default_border 				pixel 4
 default_floating_border 	none
-hide_edge_borders 		both
+hide_edge_borders 			both
 
 # start a terminal
-bindsym $mod+Return 		exec $TERMINAL -f $BM_FONT 
+bindsym $mod+Return 		exec --no-startup-id $TERMINAL -f "$TERM_FONT"
 
 # kill focused window
 bindsym $mod+Shift+q 		kill
@@ -34,36 +34,36 @@ bindsym $mod+Shift+r 		restart
 #bindsym $mod+Shift+e 		exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # Set XRandR settings
-exec xrandr --output DP-0 --primary --mode 2560x1440 --pos 0x0 --rotate normal --output DVI-D-0 --off --output HDMI-1 --off --output DP-1 --off --output HDMI-0 --mode 2560x1440 --pos 2560x0 --rotate normal
+exec --no-startup-id xrandr --output DP-0 --primary --mode 2560x1440 --pos 0x0 --rotate normal --output DVI-D-0 --off --output HDMI-1 --off --output DP-1 --off --output HDMI-0 --mode 2560x1440 --pos 2560x0 --rotate normal
 
 
 
 
 
 # ------------------------- MULTIMEDIA KEYS  -------------------------
-bindsym XF86Sleep		exec $SCRIPTS/30-manage-i3.sh menu
+bindsym XF86Sleep			exec --no-startup-id $SCRIPTS/30-manage-i3.sh menu
 
 
 
 
 # ------------------------- COLORS  -------------------------
 # using ~/.Xresources
-set_from_resource 		$fg-color 	i3wm.foreground
-set_from_resource 		$bg-color 	i3wm.background
-set_from_resource 		$contrast-color i3wm.contrast
-set_from_resource 		$red-color 	i3wm.color1
-set_from_resource 		$green-color 	i3wm.color2
-set_from_resource 		$yellow-color 	i3wm.color3
-set_from_resource 		$orange-color 	i3wm.color4
-set_from_resource 		$purple-color 	i3wm.color5
-set_from_resource 		$cyan-color 	i3wm.color6
+set_from_resource 			$fg-color 	global.foreground
+set_from_resource 			$bg-color 	global.background
+set_from_resource 			$contrast-color global.contrast
+set_from_resource 			$red-color 	global.color1
+set_from_resource 			$green-color 	global.color2
+set_from_resource 			$yellow-color 	global.color3
+set_from_resource 			$orange-color 	global.color4
+set_from_resource 			$purple-color 	global.color5
+set_from_resource 			$cyan-color 	global.color6
 
 # class                 	border  	backgr. 	text    	indicator 	child_border
 client.focused          	$contrast-color	$bg-color	$yellow-color	$contrast-color	$contrast-color
-client.focused_inactive         $bg-color	$bg-color	$yellow-color	$bg-color	$bg-color
-client.unfocused          	$bg-color	$bg-color	$contrast-color	$bg-color	$bg-color
-client.urgent         		$red-color	$bg-color	$red-color	$red-color	$red-color
-client.placeholder          	$bg-color	$bg-color	$yellow-color	$bg-color	$bg-color
+client.focused_inactive     $bg-color		$bg-color	$yellow-color	$bg-color	$bg-color
+client.unfocused          	$bg-color		$bg-color	$contrast-color	$bg-color	$bg-color
+client.urgent         		$red-color		$bg-color	$red-color	$red-color	$red-color
+client.placeholder          $bg-color		$bg-color	$yellow-color	$bg-color	$bg-color
 client.background       	$fg-color
 
 
@@ -71,25 +71,26 @@ client.background       	$fg-color
 
 
 # ------------------------- SETTINGS  -------------------------
-bindsym $mod+shift+s		exec $SCRIPTS/20-xres-colors.sh spotlight
-bindsym $mod+shift+e		exec $SCRIPTS/30-manage-i3.sh menu
-bindsym $mod+shift+b		exec $SCRIPTS/10-background.sh
+bindsym $mod+shift+s		exec --no-startup-id $SCRIPTS/20-xres-colors.sh spotlight
+bindsym $mod+shift+e		exec --no-startup-id $SCRIPTS/30-manage-i3.sh menu
+bindsym $mod+shift+b		exec --no-startup-id $SCRIPTS/10-background.sh
+bindsym $mod+shift+w		exec --no-startup-id $SCRIPTS/41-workspace-launcher.sh spotlight
 
 
 
 
 # ------------------------- NAVIGATION  -------------------------
 # change focus
-bindsym $mod+j 			focus left
-bindsym $mod+k 			focus down
-bindsym $mod+l 			focus up
+bindsym $mod+j 				focus left
+bindsym $mod+k 				focus down
+bindsym $mod+l 				focus up
 bindsym $mod+odiaeresis 	focus right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left 		focus left
-bindsym $mod+Down 		focus down
-bindsym $mod+Up 		focus up
-bindsym $mod+Right 		focus right
+bindsym $mod+Left 			focus left
+bindsym $mod+Down 			focus down
+bindsym $mod+Up 			focus up
+bindsym $mod+Right 			focus right
 
 # move focused window
 bindsym $mod+Shift+j 		move left
@@ -104,33 +105,33 @@ bindsym $mod+Shift+Up 		move up
 bindsym $mod+Shift+Right 	move right
 
 # split in horizontal orientation
-bindsym $mod+h 			split h
+bindsym $mod+h 				split h
 
 # split in vertical orientation
-bindsym $mod+v 			split v
+bindsym $mod+v 				split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f 			fullscreen toggle
+bindsym $mod+f 				fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s 			layout stacking
-bindsym $mod+w 			layout tabbed
-bindsym $mod+e 			layout toggle split
+bindsym $mod+s 				layout stacking
+bindsym $mod+w 				layout tabbed
+bindsym $mod+e 				layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space 	floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space 		focus mode_toggle
+bindsym $mod+space 			focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a 			focus parent
+bindsym $mod+a 				focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
 
 # Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier 		$mod
+floating_modifier 			$mod
 
 
 
@@ -138,14 +139,14 @@ floating_modifier 		$mod
 
 # ------------------------- WORKSPACES -------------------------
 # define outputs
-set $output1 			"DP-0"
-set $output2 			"HDMI-0"
+set $output1 				"DP-0"
+set $output2 				"HDMI-0"
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1 			"CHROME"
-set $ws2 			"CODE"
-set $ws3 			"3"
+set $ws2 			"TERMINAL"
+set $ws3 			"CODE"
 set $ws4 			"4"
 set $ws5 			"5"
 set $ws6 			"6"
@@ -180,11 +181,15 @@ bindsym $mod+Shift+0 		move container to workspace $ws10
 
 # assign applications to workspaces
 assign [class="Chromium"] 	$ws1
+assign [instance="subl3"] 	$ws3
+assign [instance="CODE_TERM_1"]	$ws3
+assign [instance="CODE_TERM_2"]	$ws3
 assign [class="Firefox"] 	$ws9
 
 # assign workspaces to outputs
 workspace $ws1 			output $output1 # Chrome
 workspace $ws2 			output $output2 # Terminals
+workspace $ws3 			output $output2 # Code
 workspace $ws9 			output $output1 # Firefox
 
 
@@ -195,13 +200,13 @@ workspace $ws9 			output $output1 # Firefox
 gaps inner 15
 gaps outer 15
 
-bindsym $mod+o			gaps inner current plus 5
-bindsym $mod+shift+o		gaps inner current minus 5
+bindsym $mod+o					gaps inner current plus 5
+bindsym $mod+shift+o			gaps inner current minus 5
 
-bindsym $mod+p			gaps outer current plus 5
-bindsym $mod+shift+p		gaps outer current minus 5
+bindsym $mod+p					gaps outer current plus 5
+bindsym $mod+shift+p			gaps outer current minus 5
 
-bindsym $mod+BackSpace		gaps inner all set 15; gaps outer all set 15
+bindsym $mod+BackSpace			gaps inner all set 15; gaps outer all set 15
 bindsym $mod+shift+BackSpace	gaps inner all set 0; gaps outer all set 0
 
 
@@ -209,10 +214,10 @@ bindsym $mod+shift+BackSpace	gaps inner all set 0; gaps outer all set 0
 
 
 # ------------------------- RESIZE -------------------------
-bindsym $mod+KP_Left 		resize shrink width 10 px or 10 ppt
-bindsym $mod+KP_Down 		resize grow height 10 px or 10 ppt
-bindsym $mod+KP_Up 		resize shrink height 10 px or 10 ppt
-bindsym $mod+KP_Right 		resize grow width 10 px or 10 ppt
+bindsym $mod+KP_Left 			resize shrink width 10 px or 10 ppt
+bindsym $mod+KP_Down 			resize grow height 10 px or 10 ppt
+bindsym $mod+KP_Up 				resize shrink height 10 px or 10 ppt
+bindsym $mod+KP_Right 			resize grow width 10 px or 10 ppt
 
 
 
@@ -220,9 +225,9 @@ bindsym $mod+KP_Right 		resize grow width 10 px or 10 ppt
 
 # ------------------------- AUTOSTART  -------------------------
 exec_always --no-startup-id 	$HOME/.config/polybar/launch.sh
-exec --no-startup-id 		$SCRIPTS/10-background.sh
-exec --no-startup-id 		$SCRIPTS/20-network-shares.sh
-exec --no-startup-id 		chromium
+exec --no-startup-id 			$SCRIPTS/10-background.sh
+exec --no-startup-id 			$SCRIPTS/20-network-shares.sh
+exec --no-startup-id 			chromium
 
 
 
@@ -233,8 +238,8 @@ exec --no-startup-id 		chromium
 for_window [instance="config"] floating enable 
 for_window [instance="config"] resize set 1000 1000
 for_window [instance="config"] move scratchpad
-exec	 			$TERMINAL -f $BM_FONT -n config -e vim
-bindsym F1			[instance="config"] scratchpad show; [instance="config"] move position center 
+exec --no-startup-id 			$TERMINAL -f $TERM_FONT -n config -e vim
+bindsym F1						[instance="config"] scratchpad show; [instance="config"] move position center 
 
 # Calculator
 for_window [instance="calculator"] floating enable 
@@ -242,13 +247,13 @@ for_window [instance="calculator"] resize set 300 300
 for_window [instance="calculator"] move position center
 for_window [instance="calculator"] move scratchpad
 for_window [instance="calculator"] border pixel 5
-exec 				$TERMINAL -f $CALC_FONT -n calculator -e qalc
-bindsym XF86Calculator		[instance="calculator"] scratchpad show; [instance="calculator"] move position center
+exec --no-startup-id			$TERMINAL -f "$CALC_FONT" -n calculator -e qalc
+bindsym XF86Calculator			[instance="calculator"] scratchpad show; [instance="calculator"] move position center
 
 
 
 
 
 # ------------------------- APPLICATIONS  -------------------------
-bindsym $mod+$alt+space 	exec $SEARCH 
-bindsym $mod+$alt+L 		exec i3lock
+bindsym $mod+$alt+space 	exec --no-startup-id $SEARCH 
+bindsym $mod+$alt+L 		exec --no-startup-id i3lock

@@ -1,83 +1,97 @@
 ! -------------- DEFINITIONS --------------
-#define FONT 			Misc Termsyn
-#define SIZE 			10
+#define TERMINAL			xst
+#define FONT 				Misc Termsyn
+#define FONT_SIZE_S			8
+#define FONT_SIZE_M			10
+#define FONT_SIZE_L			13
 
-#define AA 				0
-#define AHINT 			0
-#define LCDF 			lcddefault
-#define HINTS 			hintslight
-#define HINT 			0
-#define RGBA 			rgba
+#define MONO_FONT			Inconsolata
+#define MONO_FONT_SIZE_S	10
+#define MONO_FONT_SIZE_M	13
+#define MONO_FONT_SIZE_L	18
 
+#define AA 					1
+#define AHINT 				0
+#define LCDF 				lcddefault
+#define HINTS 				hintslight
+#define HINT 				1
+#define RGBA 				rgba
 
-
-
-
-! -------------- TERMINAL --------------
-st.termname:     		st-256color
-st.shell:        		/bin/zsh
-st.font:              	FONT:pixelsize=SIZE:antialias=AA:autohint=AHINT;
-st.borderpx:          	10
-st.cursorshape:       	1
-st.cursorthickness:   	2
-st.cursorblinkstyle:  	0
-st.cursorblinkontype: 	1
-st.bold_font:         	1
-st.xfps:              	120
-st.actionfps:         	30
-st.mouseScrollLines:  	1
-st.chscale:           	1.0
-st.cwscale:           	1.0
-st.blinktimeout:      	800
-st.bellvolume:        	0
-st.prompt_char:       	$
-st.imstyle:           	root
-st.opacity:				255
+#define	FONT_STRING			FONT:pixelsize=FONT_SIZE_L:antialias=AA:autohint=AHINT
+#define MONO_STRING			pango:MONO_FONT:pixelsize=MONO_FONT_SIZE_L
 
 
 
 
 
 ! -------------- COLOR IMPORT --------------
-#include 				".config/Xresources/COLORS"
-*.contrast: 			base02
+#include 					".config/Xresources/COLORS"
+
+! -------------- GLOBAL SETTINGS --------------
+global.font:				FONT
+global.font-size:			FONT_SIZE_M
+global.font-mono:			MONO_FONT
+global.font-mono-md:		MONO_FONT_SIZE_M
+global.font-mono-lg:		MONO_FONT_SIZE_L
+global.font-rofi:			FONT FONT_SIZE_S
+global.mono-rofi:			MONO_FONT MONO_FONT_SIZE_S
+
+global.bg: 					base00
+global.grey-dark: 			base01
+global.grey: 				base02
+global.grey-bright: 		base03
+global.fg-dark: 			base04 
+global.fg: 					base05
+global.fg-bright: 			base06
+global.fg-white: 			base07
+
+global.contrast:			base02
+global.contrast-dark:		base0F
+global.contrast-darker:		base09
+global.accent:				baseCC
+
+global.red:					base08
+global.yellow:				base0A
+global.green:				base0B
+global.cyan:				base0C
+global.purple:				base0D
+global.orange:				base0E
+
+
+
+
+
+! -------------- TERMINAL --------------
+st.termname:     			st-256color
+st.title:					TERMINAL
+st.shell:        			/bin/zsh
+st.font:              		FONT_STRING
+st.font-mono:				MONO_STRING
+st.borderpx:          		10
+st.cursorshape:       		1
+st.cursorthickness:   		2
+st.cursorblinkstyle:  		0
+st.cursorblinkontype: 		1
+st.bold_font:         		1
+st.xfps:              		120
+st.actionfps:         		30
+st.mouseScrollLines:  		1
+st.chscale:           		1.0
+st.cwscale:           		1.0
+st.blinktimeout:      		800
+st.bellvolume:        		0
+st.prompt_char:       		$
+st.imstyle:           		root
+st.opacity:					255
 
 
 
 
 
 ! -------------- GLOBAL SETTINGS --------------
-global.font:			FONT SIZE
-global.rofifont:		FONT 8
-global.bg: 				base00
-global.grey-dark: 		base01
-global.grey: 			base02
-global.grey-bright: 	base03
-global.fg-dark: 		base04 
-global.fg: 				base05
-global.fg-bright: 		base06
-global.fg-white: 		base07
-
-global.contrast:		base02
-global.contrast-dark:	base0F
-global.contrast-darker:	base09
-global.accent:			baseCC
-
-global.red:				base08
-global.yellow:			base0A
-global.green:			base0B
-global.cyan:			base0C
-global.purple:			base0D
-global.orange:			base0E
-
-
-
-
-
-! -------------- GLOBAL SETTINGS --------------
-Xft.autohint:			AHINT
-Xft.lcdfilter:			LCDF
-Xft.hintstyle:			HINTS
-Xft.hinting:			HINT
-Xft.antialias:			AA
-Xft.rgba:				RGBA
+Xft.autohint:				AHINT
+Xft.lcdfilter:				LCDF
+Xft.hintstyle:				HINTS
+Xft.hinting:				HINT
+Xft.antialias:				AA
+Xft.rgba:					RGBA

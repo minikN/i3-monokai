@@ -23,14 +23,21 @@ RESOURCES="
 	purple
 	orange
 	cyan
-	typeface
 	accent
 	highlight
+	font-rofi
+	mono-rofi
 "
 
 for x in $RESOURCES; do
-	if [[ $x == "typeface" ]]; then
-		xres=$(xrdb -query | awk -v z="global.rofifont:" '$1==z{for (i=2; i<NF; i++) printf $i " "; print $NF}')
+	if [[ $x == "font-rofi" ]]; then
+		xres=$(xrdb -query | awk -v z="global.font-rofi:" '$1==z{for (i=2; i<NF; i++) printf $i " "; print $NF}')
+		echo "$x: $xres"
+		sed -i --follow-symlinks "/$x: /c\\$x: \"$xres\"\;" $SPOTLIGHT
+		sed -i --follow-symlinks "/$x: /c\\$x: \"$xres\"\;" $DMENU
+	elif [[ $x == "mono-rofi" ]]; then
+		xres=$(xrdb -query | awk -v z="global.mono-rofi:" '$1==z{for (i=2; i<NF; i++) printf $i " "; print $NF}')
+		echo "$x: $xres"
 		sed -i --follow-symlinks "/$x: /c\\$x: \"$xres\"\;" $SPOTLIGHT
 		sed -i --follow-symlinks "/$x: /c\\$x: \"$xres\"\;" $DMENU
 	elif [[ $x == "highlight" ]]; then

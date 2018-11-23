@@ -9,7 +9,7 @@ SCRIPTS=$HOME/.config/scripts
 # Getting all available color palettes
 # You may add your own palette. It has to be in .Xresources format.
 # Take a look at https://github.com/chriskempson/base16-xresources
-ACTION=$(echo -e "SHUTDOWN\nRESTART\nSLEEP\nCLOSE WM\nRELOAD WM" | rofi -dmenu -p "What do you want to do?" -theme $1)
+ACTION=$(echo -e "SHUTDOWN\nRESTART\nSLEEP\nCLOSE WM\nRELOAD WM" | rofi -dmenu -p "WHAT DO YOU WANT TO DO?" -theme $1)
 
 # Exit if no theme was selcted
 [[ -z "$ACTION" ]] && exit

@@ -3,26 +3,27 @@
 /* These variables get changed automatically through
  * the shell script.
  */
-bg: #2d2a2e;
-grey: #5b595c;
-grey-dark: #403e41;
-grey-bright: #727072;
-fg: #fcfcfa;
-fg-dark: #939293;
-fg-bright: #fefefd;
+bg: #272821;
+grey: #57584f;
+grey-dark: #3b3c35;
+grey-bright: #6e7066;
+fg: #fdfff1;
+fg-dark: #919288;
+fg-bright: #fefff8;
 fg-white: #ffffff;
-contrast: #5b595c;
-contrast-dark: #221f22;
-contrast-darker: #19181a;
-red: #ff6188;
-yellow: #ffd866;
-green: #a9dc76;
-purple: #ab9df2;
-orange: #fc9867;
-cyan: #78dce8;
-accent: #403e41;
-highlight: bold #ffd866;
-typeface: "Misc Termsyn 8";
+contrast: #57584f;
+contrast-dark: #1d1e19;
+contrast-darker: #161613;
+red: #f82570;
+yellow: #e4db73;
+green: #a6e12d;
+purple: #ae81ff;
+orange: #fc961f;
+cyan: #66d9ee;
+accent: #3b3c35;
+highlight: bold #e4db73;
+font-rofi: "Misc Termsyn 8";
+mono-rofi: "Inconsolata 10";
 
     spacing:                     2;
     separatorcolor:              @grey;
@@ -75,7 +76,6 @@ typeface: "Misc Termsyn 8";
     padding: 5;
 }
 #message {
-
     border:       2px 0px 0px ;
     border-color: @separatorcolor;
     padding:      0px;
@@ -85,6 +85,8 @@ typeface: "Misc Termsyn 8";
     text-color: @foreground;
 }
 #listview {
+    expand: true;
+    margin-right: 0px;
     layout: horizontal;
     fixed-height: 0;
     spacing:      5px;
@@ -93,9 +95,10 @@ typeface: "Misc Termsyn 8";
     lines: 100;
 }
 #element {
+    horizontal-align: 1;
     border:  0;
     padding: 5px;
-    font: @typeface;
+    font: @font-rofi;
 }
 #element.normal.normal {
     background-color: @normal-background;
@@ -159,12 +162,14 @@ typeface: "Misc Termsyn 8";
     margin: 10px;
     spacing:    0;
     text-color: @foreground;
+       font: @font-rofi;
 }
 #prompt {
     vertical-align: 0.5;
     padding-top: 10px;
     spacing:    0;
     text-color: @foreground;
+    font: @font-rofi;
 }
 #inputbar {
     children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];

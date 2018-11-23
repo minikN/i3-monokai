@@ -18,7 +18,7 @@ declare -a FILES=(
 	".vimrc"
 	".vim"
 	".config/polybar"
-	".config/i3/config"
+	".config/i3"
 	".config/backgrounds"
 	".config/scripts"
 	".config/rofi"

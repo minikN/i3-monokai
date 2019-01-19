@@ -1,0 +1,27 @@
+* {
+    /* These variables get changed automatically through
+     * the shell script.
+     */
+
+    bg: %%bg%%;
+    grey: %%grey%%;
+    grey-dark: %%grey-dark%%;
+    grey-bright: %%grey-bright%%;
+    fg: %%fg%%;
+    fg-dark: %%fg-dark%%;
+    fg-bright: %%fg-bright%%;
+    fg-white: %%fg-white%%;
+    contrast: %%contrast%%;
+    contrast-dark: %%contrast-dark%%;
+    contrast-darker: %%contrast-darker%%;
+    red: %%red%%;
+    yellow: %%yellow%%;
+    green: %%green%%;
+    purple: %%purple%%;
+    orange: %%orange%%;
+    cyan: %%cyan%%;
+    accent: %%accent%%;
+    highlight: bold %%yellow%%;
+    font-rofi: "%%font%% %%fontsize1%%";
+    mono-rofi: "%%font2%% %%fontsize2%%";
+}

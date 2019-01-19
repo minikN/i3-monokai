@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# POST-APPLY script for rofi.
+# This is a bash script. Tuzk will run this script after the rofi generator
+# is applied. Tuzk will also create temporary global theme variables for you to
+# use for the lifetime of the script.

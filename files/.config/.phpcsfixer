@@ -1,0 +1,14 @@
+<?php
+return PhpCsFixer\Config::create()
+->setRules([
+    '@PSR2' => true,
+    'no_unused_imports' => true,
+    'no_useless_else' => true,
+    'no_useless_return' => true,
+    'no_unneeded_curly_braces' => true,
+    'no_trailing_whitespace' => true,
+    'no_trailing_comma_in_singleline_array' => true,
+    'no_trailing_comma_in_list_call' => true,
+    'no_superfluous_elseif' => true,
+    'array_syntax' => ['syntax' => 'short']
+]);

@@ -1,0 +1,23 @@
+SCHEME_NAME	MonokaiPro
+accent	#403e41
+cyan	#78dce8
+orange	#fc9867
+purple	#ab9df2
+green	#a9dc76
+yellow	#ffd866
+red	#ff6188
+contrast-darker	#19181a
+contrast-dark	#221f22
+contrast	#5b595c
+fg-white	#ffffff
+fg-bright	#fefefd
+fg-dark	#939293
+fg	#fcfcfa
+grey-bright	#727072
+grey-dark	#403e41
+grey	#5b595c
+bg	#2d2a2e
+fontsize2	10
+fontsize1	8
+font2	Inconsolata
+font	Misc Termsyn

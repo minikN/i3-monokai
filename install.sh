@@ -10,18 +10,22 @@
 # your liking.
 #
 # All dotfiles are located in the 'files'
-# folder. 
+# folder.
 declare -a FILES=(
 	".xinitrc"
 	".Xresources"
 	".zshrc"
 	".vimrc"
 	".vim"
+    ".config/.phpcsfixer"
 	".config/polybar"
 	".config/i3"
+	".config/tuzk"
 	".config/backgrounds"
 	".config/scripts"
 	".config/rofi"
+	".config/mondo"
+    ".config/tuzk"
 	".config/Xresources"
 )
 
@@ -50,7 +54,7 @@ if [[ $1 == "symlink" || $1 == "copy" ]]; then
 		printf "${GREEN}INFO:${RESET} Creating temporary directory: ${YELLOW}$BACKUP${RESET}.\n"
 		mkdir $BACKUP
 	fi
-	
+
 	# Abort if backup folder exists and already has backup files
 	# otherwise we would override the files (no good).
 	for FILE in "${FILES[@]}"
@@ -63,19 +67,19 @@ if [[ $1 == "symlink" || $1 == "copy" ]]; then
 		fi
 	done
 
-	# Installation	
+	# Installation
 	for FILE in "${FILES[@]}"
 	do
 		if [ -e $HOME/$FILE ]; then
-			printf "${GREEN}INFO:${RESET} Configuration found. Backing ${YELLOW}$FILE${RESET} up to: $BACKUP/$FILE.\n" 
-			
+			printf "${GREEN}INFO:${RESET} Configuration found. Backing ${YELLOW}$FILE${RESET} up to: $BACKUP/$FILE.\n"
+
 			if [[ $FILE == *\/* ]]; then
 				mkdir -p $BACKUP/"${FILE%/*}"
 			fi
 			mv $HOME/$FILE $BACKUP/$FILE
 
 		fi
-	
+
 		if [[ $FILE == *\/* ]]; then
 			mkdir -p $HOME/"${FILE%/*}"
 		fi
@@ -88,19 +92,19 @@ if [[ $1 == "symlink" || $1 == "copy" ]]; then
 			ln -sf $BASEDIR/files/$FILE $HOME/$FILE
 		fi
 	done
-	
+
 	# Granting execute permissons
 	for filename in $HOME/.config/scripts/*.sh
 	do
 		if [[ -e $filename ]]; then
-			printf "${YELLOW}SCRIPT:${RESET} Granting execute permissions: ${RED}$filename${RESET}.\n" 
+			printf "${YELLOW}SCRIPT:${RESET} Granting execute permissions: ${RED}$filename${RESET}.\n"
 			chmod +x $filename
 		fi
 	done
 
 	# Handling backup folder post install
 	if [ -z "$(ls -A $BACKUP)" ]; then
-		printf "${GREEN}INFO:${RESET} No backups needed. Deleting temporary directory: ${YELLOW}$BACKUP${RESET}.\n" 
+		printf "${GREEN}INFO:${RESET} No backups needed. Deleting temporary directory: ${YELLOW}$BACKUP${RESET}.\n"
 		rm -rf $BACKUP
 	else
 		printf "${GREEN}INFO:${RESET} Backups created in: ${YELLOW}$BACKUP${RESET}.\n"
@@ -108,22 +112,22 @@ if [[ $1 == "symlink" || $1 == "copy" ]]; then
 	printf "${GREEN}INFO:${RESET} ${BOLD}Everything done. Cheers.${RESET}\n"
 
 elif [[ $1 == "clean" ]]; then
-	printf "${GREEN}INFO:${RESET} ${BOLD}CLEAN${RESET} argument supplied. Cleaning configuration and restoring backup.\n"	
-	
+	printf "${GREEN}INFO:${RESET} ${BOLD}CLEAN${RESET} argument supplied. Cleaning configuration and restoring backup.\n"
+
 	for FILE in "${FILES[@]}"
 	do
 		if [ -e $HOME/$FILE ]; then
-			printf "${GREEN}INFO:${RESET} Deleting configuration: ${RED}$FILE${RESET}\n" 
+			printf "${GREEN}INFO:${RESET} Deleting configuration: ${RED}$FILE${RESET}\n"
 			rm -rf  $HOME/$FILE
 		fi
 		if [ -e $BACKUP/$FILE ]; then
-			printf "${GREEN}INFO:${RESET} Found backup: ${YELLOW}$FILE${RESET}. Restoring.\n" 
+			printf "${GREEN}INFO:${RESET} Found backup: ${YELLOW}$FILE${RESET}. Restoring.\n"
 			mv  $BACKUP/$FILE $HOME/$FILE
 		fi
 	done
 	if [ -d "$BACKUP" ]; then
 		if [ -z "$(ls -A $BACKUP)" ]; then
-			printf "${GREEN}INFO:${RESET} Backup directory empty. Deleting: ${YELLOW}$BACKUP${RESET}.\n" 
+			printf "${GREEN}INFO:${RESET} Backup directory empty. Deleting: ${YELLOW}$BACKUP${RESET}.\n"
 			rm -rf $BACKUP
 		else
 			printf "${YELLOW}WARNING:${RESET} Backup directory not empty. Not deleting: ${YELLOW}$BACKUP${RESET}.\n"
@@ -139,12 +143,12 @@ else
 	printf "${BOLD}Argument	Definition${RESET}\n"
 	printf "${RESET}${GREEN}symlink		${RESET}Creates configuration files as symlinks.\n"
 	printf "${GREEN}copy		${RESET}Copies configuration files directly.\n"
-	printf "${GREEN}clean		${RESET}Deletes all files / symlinks and restores backup files (if available).\n"	
+	printf "${GREEN}clean		${RESET}Deletes all files / symlinks and restores backup files (if available).\n"
 	printf "${GREEN}(no argument)	${RESET}Display this menu.\n"
 	printf "\n"
 	printf "${RED}WARNING:${RESET} Running the ${BOLD}clean${RESET} argument without having run ${BOLD}symlink${RESET} or ${BOLD}copy${RESET} before will delete your default (yellow file names below) configuration files from ${YELLOW}$HOME${RESET}!\n"
 	printf "Only run the cleanup if you did run one of the other two before and want to return to your default setup.\n\n"
 	printf "What files will be worked with?\n${YELLOW}"
 	printf '%s\n' "${FILES[@]}"
-fi	
+fi
 

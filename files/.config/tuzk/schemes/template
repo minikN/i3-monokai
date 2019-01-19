@@ -1,0 +1,22 @@
+## Colors
+bg
+grey
+grey-dark
+grey-bright
+
+fg
+fg-dark
+fg-bright
+fg-white
+
+contrast
+contrast-dark
+contrast-darker
+
+red
+yellow
+green
+purple
+orange
+cyan
+accent

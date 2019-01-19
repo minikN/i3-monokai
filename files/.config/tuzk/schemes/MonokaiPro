@@ -1,0 +1,25 @@
+## NAME		    MonokaiPro
+## AUTHOR       Wimer Hazenberg (https://www.monokai.nl)
+
+## Colors
+bg              #2d2a2e
+grey            #5b595c
+grey-dark       #403e41
+grey-bright     #727072
+
+fg              #fcfcfa
+fg-dark         #939293
+fg-bright       #fefefd
+fg-white        #ffffff
+
+contrast        #5b595c
+contrast-dark   #221f22
+contrast-darker #19181a
+
+red             #ff6188
+yellow          #ffd866
+green           #a9dc76
+purple          #ab9df2
+orange          #fc9867
+cyan            #78dce8
+accent          #403e41

@@ -110,5 +110,6 @@ if [[ ! -d $ZSH_CACHE_DIR ]]; then
   mkdir $ZSH_CACHE_DIR
 fi
 
+export PATH=~/.config/composer/vendor/bin:$PATH
 source $ZSH/oh-my-zsh.sh
 

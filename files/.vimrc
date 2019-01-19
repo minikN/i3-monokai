@@ -4,7 +4,7 @@ set t_CO=256
 so ~/.vim/plugins.vim							"Load plugins.
 
 syntax on
-colorscheme base16-monokaipro-classic
+colorscheme base16-monokaipro-octagon
 
 set backspace=indent,eol,start						"Make backspace delete indentation, whitespace ect
 let mapleader= ','							"Comma should be the leader

@@ -227,6 +227,8 @@ bindsym $mod+KP_Right 			resize grow width 10 px or 10 ppt
 exec_always --no-startup-id 	$HOME/.config/polybar/launch.sh
 exec --no-startup-id 			$SCRIPTS/10-background.sh
 exec --no-startup-id 			$SCRIPTS/20-network-shares.sh
+exec --no-startup-id			flameshot
+exec --no-startup-id			compton
 exec --no-startup-id 			chromium
 
 
@@ -235,14 +237,14 @@ exec --no-startup-id 			chromium
 
 # ------------------------- DROPDOWNS -------------------------
 # Config window
-for_window [instance="config"] floating enable 
+for_window [instance="config"] floating enable
 for_window [instance="config"] resize set 1000 1000
 for_window [instance="config"] move scratchpad
 exec --no-startup-id 			$TERMINAL -f $TERM_FONT -n config -e vim
-bindsym F1						[instance="config"] scratchpad show; [instance="config"] move position center 
+bindsym F1						[instance="config"] scratchpad show; [instance="config"] move position center
 
 # Calculator
-for_window [instance="calculator"] floating enable 
+for_window [instance="calculator"] floating enable
 for_window [instance="calculator"] resize set 300 300
 for_window [instance="calculator"] move position center
 for_window [instance="calculator"] move scratchpad
@@ -254,6 +256,13 @@ bindsym XF86Calculator			[instance="calculator"] scratchpad show; [instance="cal
 
 
 
+# ------------------------- WINDOW OPTIONS  -------------------------
+for_window [class="flameshot"] floating enable
+
+
+
+
+
 # ------------------------- APPLICATIONS  -------------------------
-bindsym $mod+$alt+space 	exec --no-startup-id $SEARCH 
+bindsym $mod+$alt+space 	exec --no-startup-id $SEARCH
 bindsym $mod+$alt+L 		exec --no-startup-id i3lock

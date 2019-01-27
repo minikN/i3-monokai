@@ -1,0 +1,11 @@
+white = %%fg%%
+base = %%bg%%
+orange = %%orange%%
+purple = %%contrast-darker%%
+red = %%red%%
+yellow = %%yellow%%
+cyan = %%cyan%%
+cyan2 = %%purple%%
+contrast = %%grey%%
+font0 = "%%font%%:size=%%fontsize_md%%;1"
+font1 = "%%font3%%:size=%%fontsize_md2%%;1"

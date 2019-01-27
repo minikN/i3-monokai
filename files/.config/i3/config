@@ -48,22 +48,22 @@ bindsym XF86Sleep			exec --no-startup-id $SCRIPTS/30-manage-i3.sh menu
 
 # ------------------------- COLORS  -------------------------
 # using ~/.Xresources
-set_from_resource 			$fg-color 	global.foreground
-set_from_resource 			$bg-color 	global.background
-set_from_resource 			$contrast-color global.contrast
-set_from_resource 			$red-color 	global.color1
-set_from_resource 			$green-color 	global.color2
-set_from_resource 			$yellow-color 	global.color3
-set_from_resource 			$orange-color 	global.color4
-set_from_resource 			$purple-color 	global.color5
-set_from_resource 			$cyan-color 	global.color6
+set_from_resource 			$fg-color 	i3.foreground
+set_from_resource 			$bg-color 	i3.background
+set_from_resource 			$contrast-color i3.color18
+set_from_resource 			$red-color 	    i3.color1
+set_from_resource 			$green-color 	i3.color2
+set_from_resource 			$yellow-color 	i3.color3
+set_from_resource 			$orange-color 	i3.color4
+set_from_resource 			$purple-color 	i3.color5
+set_from_resource 			$cyan-color 	i3.color6
 
-# class                 	border  	backgr. 	text    	indicator 	child_border
-client.focused          	$contrast-color	$bg-color	$yellow-color	$contrast-color	$contrast-color
-client.focused_inactive     $bg-color		$bg-color	$yellow-color	$bg-color	$bg-color
-client.unfocused          	$bg-color		$bg-color	$contrast-color	$bg-color	$bg-color
-client.urgent         		$red-color		$bg-color	$red-color	$red-color	$red-color
-client.placeholder          $bg-color		$bg-color	$yellow-color	$bg-color	$bg-color
+# class                     border  	       backgr. 	    text    	    indicator 	    child_border
+client.focused          	$contrast-color    $bg-color	$yellow-color	$contrast-color	$contrast-color
+client.focused_inactive     $bg-color		   $bg-color	$yellow-color	$bg-color	    $bg-color
+client.unfocused          	$bg-color          $bg-color	$contrast-color	$bg-color	    $bg-color
+client.urgent         		$red-color		   $bg-color	$red-color	    $red-color      $red-color
+client.placeholder          $bg-color		   $bg-color	$yellow-color	$bg-color	    $bg-color
 client.background       	$fg-color
 
 

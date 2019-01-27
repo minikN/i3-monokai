@@ -1,0 +1,56 @@
+#define FONT                %%font%%
+#define MONO_FONT           %%font2%%
+#define FONT_SIZE_S         %%fontsize_sm%%
+#define FONT_SIZE_M         %%fontsize_md%%
+#define FONT_SIZE_L         %%fontsize_lg%%
+
+#define MONO_FONT_SIZE_S    %%fontsize_md%%
+#define MONO_FONT_SIZE_M    %%fontsize_lg%%
+#define MONO_FONT_SIZE_L    %%fontsize_slg%%
+
+#define base00 %%bg%%
+#define base01 %%grey-dark%%
+#define base02 %%grey%%
+#define base03 %%grey-bright%%
+#define base04 %%fg-dark%%
+#define base05 %%fg%%
+#define base06 %%fg-bright%%
+#define base07 %%fg-white%%
+#define base08 %%red%%
+#define base09 %%contrast-darker%%
+#define base0A %%yellow%%
+#define base0B %%green%%
+#define base0C %%cyan%%
+#define base0D %%purple%%
+#define base0E %%orange%%
+#define base0F %%contrast-dark%%
+#define baseCC %%grey-dark%%
+
+*foreground:   base05
+*background:   base00
+*cursorColor:  base05
+
+*color0:       base00
+*color1:       base08
+*color2:       base0B
+*color3:       base0A
+*color4:       base0D
+*color5:       base0E
+*color6:       base0C
+*color7:       base05
+*color8:       base03
+*color9:       base08
+*color10:      base0B
+*color11:      base0A
+*color12:      base0D
+*color13:      base0E
+*color14:      base0C
+*color15:      base07
+*color16:      base09
+*color17:      base0F
+*color18:      base01
+*color19:      base02
+*color20:      base04
+*color21:      base06
+
+%%yellow_R%%

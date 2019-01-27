@@ -1,0 +1,8 @@
+ ## Target file for xresources.
+## In this file you can specify a target where the xresources generator file will be copied to
+## when applied. If you didn't specify a source file when you created the generator, the
+## variable below will be empty. Just add the path to the file after a whitespace, or comment
+## it out entirely if you don't want to copy anything.
+
+target /home/demis/.config/Xresources/COLORS
+mode    hex,rgb

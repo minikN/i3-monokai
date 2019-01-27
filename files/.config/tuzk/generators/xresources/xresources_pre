@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# PRE-APPLY script for xresources.
+# This is a bash script. Tuzk will run this script before the xresources generator
+# is applied. Tuzk will also create temporary global theme variables for you to
+# use for the lifetime of the script.

@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# POST-APPLY script for sublime.
+# This is a bash script. Tuzk will run this script after the sublime generator
+# is applied. Tuzk will also create temporary global theme variables for you to
+# use for the lifetime of the script.
+
+THEME="$(tuzk -r sublTheme)"
+SCHEME="$(tuzk -r sublScheme)"
+
+PKGCTL_DIR=~/.config/sublime-text-3/Packages/User
+SUBL_SETTINGS="Preferences.sublime-settings"
+
+if [[ -n $SCHEME ]]; then
+    sed -i --follow-symlinks "/color_scheme/c\\\"color_scheme\": \"Packages/$THEME/$SCHEME.tmTheme\"," "$PKGCTL_DIR/$SUBL_SETTINGS"
+    sed -i --follow-symlinks "/theme/c\\\"theme\": \"$SCHEME.sublime-theme\"," "$PKGCTL_DIR/$SUBL_SETTINGS"
+fi

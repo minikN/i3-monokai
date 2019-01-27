@@ -1,0 +1,29 @@
+## NAME		MonokaiPro-Machine
+## AUTHOR	demis
+## CREATED	19-01-2019
+
+## Colors
+bg              #273136
+grey            #545f62
+grey-dark       #3a4449
+grey-bright     #6b7678
+
+fg              #f2fffc
+fg-dark         #8b9798
+fg-bright       #f9fffe
+fg-white        #ffffff
+
+contrast        grey
+contrast-dark   #1d2528
+contrast-darker #161b1e
+
+red             #ff6d7e
+yellow          #ffed72
+green           #a2e57b
+purple          #baa0f8
+orange          #ffb270
+cyan            #7cd5f1
+accent          grey-dark
+
+sublTheme       Theme - Monokai Pro
+sublScheme      Monokai Pro (Filter Machine)

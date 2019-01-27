@@ -22,6 +22,6 @@
     cyan: %%cyan%%;
     accent: %%accent%%;
     highlight: bold %%yellow%%;
-    font-rofi: "%%font%% %%fontsize1%%";
-    mono-rofi: "%%font2%% %%fontsize2%%";
+    font-rofi: "%%font%% %%fontsize_sm%%";
+    mono-rofi: "%%font2%% %%fontsize_md%%";
 }

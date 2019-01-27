@@ -12,7 +12,7 @@ fg-dark         #939293
 fg-bright       #fefefd
 fg-white        #ffffff
 
-contrast        #5b595c
+contrast        grey
 contrast-dark   #221f22
 contrast-darker #19181a
 
@@ -22,4 +22,7 @@ green           #a9dc76
 purple          #ab9df2
 orange          #fc9867
 cyan            #78dce8
-accent          #403e41
+accent          grey-dark
+
+sublTheme       Theme - Monokai Pro
+sublScheme      Monokai Pro

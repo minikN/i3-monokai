@@ -4,16 +4,7 @@ margin-top = 0
 margin-bottom = 0
 
 [color]
-white = ${xrdb:global.foreground:#ffffff}
-base = ${xrdb:global.background:#000000}
-orange = ${xrdb:global.color5:#ffffff}
-orange2 = ${xrdb:global.color5:#ffffff}
-purple = ${xrdb:global.color16:#ffffff}
-red = ${xrdb:global.color1:#ffffff}
-yellow = ${xrdb:global.color3:#ffffff}
-cyan = ${xrdb:global.color6:#ffffff}
-cyan2 = ${xrdb:global.color4:#ffffff}
-contrast = ${xrdb:global.contrast:#ffffff}
+include-file = /home/demis/.config/polybar/global
 
 [bar/left]
 monitor = DP-0
@@ -24,8 +15,8 @@ fixed-center = true
 width = 100%
 height = 24
 
-font-0 = "Misc Termsyn:size=10;1"
-font-1 = "Wuncon Siji:size=12;1"
+font-0 = ${color.font0}
+font-1 = ${color.font1}
 
 background = ${color.base}
 foreground = ${color.white}
@@ -61,8 +52,8 @@ fixed-center = true
 width = 100%
 height = 24
 
-font-0 = "Misc Termsyn:size=10;1"
-font-1 = "Wuncon Siji:size=12;1"
+font-0 = ${color.font0}
+i3-msg restafont-1 = ${color.font1}
 
 background = ${color.base}
 foreground = ${color.white}

@@ -1,7 +1,11 @@
 ## Default variables for every theme
 
-font        Misc Termsyn
-font2       Inconsolata
+font            Misc Termsyn
+font2           Inconsolata
+font3           Wuncon Siji
 
-fontsize1   8
-fontsize2   10
+fontsize_sm     8
+fontsize_md     10
+fontsize_md2    12
+fontsize_lg     13
+fontsize_slg    18

@@ -1,23 +1,29 @@
-SCHEME_NAME	MonokaiPro
-accent	#403e41
-cyan	#78dce8
-orange	#fc9867
-purple	#ab9df2
-green	#a9dc76
-yellow	#ffd866
-red	#ff6188
-contrast-darker	#19181a
-contrast-dark	#221f22
-contrast	#5b595c
+SCHEME_NAME	MonokaiPro-Machine
+sublScheme	Monokai Pro (Filter Machine)
+sublTheme	Theme - Monokai Pro
+accent	#3a4449
+cyan	#7cd5f1
+orange	#ffb270
+purple	#baa0f8
+green	#a2e57b
+yellow	#ffed72
+red	#ff6d7e
+contrast-darker	#161b1e
+contrast-dark	#1d2528
+contrast	#545f62
 fg-white	#ffffff
-fg-bright	#fefefd
-fg-dark	#939293
-fg	#fcfcfa
-grey-bright	#727072
-grey-dark	#403e41
-grey	#5b595c
-bg	#2d2a2e
-fontsize2	10
-fontsize1	8
+fg-bright	#f9fffe
+fg-dark	#8b9798
+fg	#f2fffc
+grey-bright	#6b7678
+grey-dark	#3a4449
+grey	#545f62
+bg	#273136
+fontsize_slg	18
+fontsize_lg	13
+fontsize_md2	12
+fontsize_md	10
+fontsize_sm	8
+font3	Wuncon Siji
 font2	Inconsolata
 font	Misc Termsyn

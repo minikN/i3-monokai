@@ -19,6 +19,7 @@ declare -a FILES=(
 	".vim"
     ".config/.phpcsfixer"
 	".config/polybar"
+	".config/lemonbar"
 	".config/i3"
 	".config/tuzk"
 	".config/backgrounds"

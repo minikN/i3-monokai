@@ -1,0 +1,29 @@
+## NAME		MonokaiPro-Spectrum
+## AUTHOR	demis
+## CREATED	19-01-2019
+
+## Colors
+bg              #222222
+grey            #525053
+grey-dark       #363537
+grey-bright     #69676c
+
+fg              #f7f1ff
+fg-dark         #8b888f
+fg-bright       #fbf8ff
+fg-white        #ffffff
+
+contrast        grey
+contrast-dark   #1e1e1e
+contrast-darker #191919
+
+red             #fc618d
+yellow          #fce566
+green           #7bd88f
+purple          #948ae3
+orange          #fd9353
+cyan            #5ad4e6
+accent          grey-dark
+
+sublTheme       Theme - Monokai Pro
+sublScheme      Monokai Pro (Filter Spectrum)

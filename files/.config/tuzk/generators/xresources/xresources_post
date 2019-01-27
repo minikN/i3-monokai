@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# POST-APPLY script for xresources.
+# This is a bash script. Tuzk will run this script after the xresources generator
+# is applied. Tuzk will also create temporary global theme variables for you to
+# use for the lifetime of the script.
+
+xrdb -load $HOME/.Xresources
+tuzk -r green
+
+for file in /dev/pts/[0-9]*; do
+    echo -e -n "\033]4;0;$(tuzk -r bg)\033\\\\" > $file
+    echo -e -n "\033]4;1;$(tuzk -r red)\033\\\\" > $file
+    echo -e -n "\033]4;2;$(tuzk -r green)\033\\\\" > $file
+    echo -e -n "\033]4;3;$(tuzk -r yellow)\033\\\\" > $file
+    echo -e -n "\033]4;4;$(tuzk -r purple)\033\\\\" > $file
+    echo -e -n "\033]4;5;$(tuzk -r orange)\033\\\\" > $file
+    echo -e -n "\033]4;6;$(tuzk -r cyan)\033\\\\" > $file
+    echo -e -n "\033]4;7;$(tuzk -r fg)\033\\\\" > $file
+    echo -e -n "\033]4;8;$(tuzk -r grey-bright)\033\\\\" > $file
+    echo -e -n "\033]4;9;$(tuzk -r red)\033\\\\" > $file
+    echo -e -n "\033]4;10;$(tuzk -r green)\033\\\\" > $file
+    echo -e -n "\033]4;11;$(tuzk -r yellow)\033\\\\" > $file
+    echo -e -n "\033]4;12;$(tuzk -r purple)\033\\\\" > $file
+    echo -e -n "\033]4;13;$(tuzk -r orange)\033\\\\" > $file
+    echo -e -n "\033]4;14;$(tuzk -r cyan)\033\\\\" > $file
+    echo -e -n "\033]4;15;$(tuzk -r fg-white)\033\\\\" > $file
+    echo -e -n "\033]4;16;$(tuzk -r contrast-darker)\033\\\\" > $file
+    echo -e -n "\033]4;17;$(tuzk -r contrast-dark)\033\\\\" > $file
+    echo -e -n "\033]4;18;$(tuzk -r grey-dark)\033\\\\" > $file
+    echo -e -n "\033]4;19;$(tuzk -r grey)\033\\\\" > $file
+    echo -e -n "\033]4;20;$(tuzk -r fg-dark)\033\\\\" > $file
+    echo -e -n "\033]4;21;$(tuzk -r fg-bright)\033\\\\" > $file
+    echo -e -n "\033]4;255;$(tuzk -r bg)\033\\\\" > $file
+    echo -e -n "\033]4;256;$(tuzk -r fg)\033\\\\" > $file
+    echo -e -n "\033]4;257;$(tuzk -r bg)\033\\\\" > $file
+done
+
+i3-msg restart

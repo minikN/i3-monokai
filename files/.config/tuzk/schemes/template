@@ -1,22 +1,22 @@
 ## Colors
-bg
-grey
-grey-dark
-grey-bright
+bg              #2d2a2e
+grey            #5b595c
+grey-dark       #403e41
+grey-bright     #727072
 
-fg
-fg-dark
-fg-bright
-fg-white
+fg              #fcfcfa
+fg-dark         #939293
+fg-bright       #fefefd
+fg-white        #ffffff
 
-contrast
-contrast-dark
-contrast-darker
+contrast        grey
+contrast-dark   #221f22
+contrast-darker #19181a
 
-red
-yellow
-green
-purple
-orange
-cyan
-accent
+red             #ff6188
+yellow          #ffd866
+green           #a9dc76
+purple          #ab9df2
+orange          #fc9867
+cyan            #78dce8
+accent          grey-dark

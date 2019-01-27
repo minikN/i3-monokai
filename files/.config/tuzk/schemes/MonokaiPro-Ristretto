@@ -1,0 +1,29 @@
+## NAME		MonokaiPro-Ristretto
+## AUTHOR	demis
+## CREATED	19-01-2019
+
+## Colors
+bg              #2c2525
+grey            #5b5353
+grey-dark       #403838
+grey-bright     #72696a
+
+fg              #fff1f3
+fg-dark         #948a8b
+fg-bright       #fff8f9
+fg-white        #ffffff
+
+contrast        grey
+contrast-dark   #211c1c
+contrast-darker #191515
+
+red             #fd6883
+yellow          #f9cc6c
+green           #adda78
+purple          #a8a9eb
+orange          #f38d70
+cyan            #85dacc
+accent          grey-dark
+
+sublTheme       Theme - Monokai Pro
+sublScheme      Monokai Pro (Filter Ristretto)

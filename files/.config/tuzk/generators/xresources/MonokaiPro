@@ -8,23 +8,23 @@
 #define MONO_FONT_SIZE_M    13
 #define MONO_FONT_SIZE_L    18
 
-#define base00 #273136
-#define base01 #3a4449
-#define base02 #545f62
-#define base03 #6b7678
-#define base04 #8b9798
-#define base05 #f2fffc
-#define base06 #f9fffe
+#define base00 #2d2a2e
+#define base01 #403e41
+#define base02 #5b595c
+#define base03 #727072
+#define base04 #939293
+#define base05 #fcfcfa
+#define base06 #fefefd
 #define base07 #ffffff
-#define base08 #ff6d7e
-#define base09 #161b1e
-#define base0A #ffed72
-#define base0B #a2e57b
-#define base0C #7cd5f1
-#define base0D #baa0f8
-#define base0E #ffb270
-#define base0F #1d2528
-#define baseCC #3a4449
+#define base08 #ff6188
+#define base09 #19181a
+#define base0A #ffd866
+#define base0B #a9dc76
+#define base0C #78dce8
+#define base0D #ab9df2
+#define base0E #fc9867
+#define base0F #221f22
+#define baseCC #403e41
 
 *foreground:   base05
 *background:   base00

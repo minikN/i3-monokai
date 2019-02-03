@@ -1,11 +1,11 @@
-white = #f2fffc
-base = #273136
-orange = #ffb270
-purple = #161b1e
-red = #ff6d7e
-yellow = #ffed72
-cyan = #7cd5f1
-cyan2 = #baa0f8
-contrast = #545f62
+white = #fcfcfa
+base = #2d2a2e
+orange = #fc9867
+purple = #19181a
+red = #ff6188
+yellow = #ffd866
+cyan = #78dce8
+cyan2 = #ab9df2
+contrast = #5b595c
 font0 = "Misc Termsyn:size=10;1"
 font1 = "Wuncon Siji:size=12;1"

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# POST-APPLY script for sublExternalTheme.
+# This is a bash script. Tuzk will run this script after the sublExternalTheme generator
+# is applied. Tuzk will also create temporary global theme variables for you to
+# use for the lifetime of the script.
+
+THEME="$(tuzk --current)"
+SUBL_SETTINGS="Preferences.sublime-settings"
+PKGCTL_DIR=~/.config/sublime-text-3/Packages/User
+
+
+sed -i "s/%%dir%%/User\/$THEME\/images/g" "$PKGCTL_DIR/Themes/Tuzk.sublime-theme"
+
+mv "$PKGCTL_DIR/Themes/Tuzk.sublime-theme" "$PKGCTL_DIR/Themes/$THEME.sublime-theme"
+sed -i --follow-symlinks "/theme/c\\\"theme\": \"$THEME.sublime-theme\"," "$PKGCTL_DIR/$SUBL_SETTINGS"

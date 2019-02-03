@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# PRE-APPLY script for sublExternalTheme.
+# This is a bash script. Tuzk will run this script before the sublExternalTheme generator
+# is applied. Tuzk will also create temporary global theme variables for you to
+# use for the lifetime of the script.
+
+SCHEME="$(tuzk --current)"
+BG="$(tuzk -r bg)"
+GREY="$(tuzk -r grey)"
+GREY_DARK="$(tuzk -r grey-dark)"
+GREY_BRIGHT="$(tuzk -r grey-bright)"
+FG="$(tuzk -r fg)"
+FG_DARK="$(tuzk -r fg-dark)"
+ACCENT_COLOR="$(tuzk -r accent-color)"
+CONTRAST="$(tuzk -r contrast)"
+CONTRAST_DARK="$(tuzk -r contrast-dark)"
+CONTRAST_DARKER="$(tuzk -r contrast-darker)"
+
+PKGCTL_DIR=~/.config/sublime-text-3/Packages/
+if [[ ! -d "$PKGCTL_DIR/User/$SCHEME" ]]; then
+    echo "INFO: Applying $SCHEME for the first time. Creating necessary folders and files.."
+    mkdir -p "$PKGCTL_DIR/User/$SCHEME/images"
+    cp -r "$PKGCTL_DIR/Tuzk/images" "$PKGCTL_DIR/User/$SCHEME/"
+
+    find "$PKGCTL_DIR/User/$SCHEME/images" -maxdepth 2 -type f | while read -r FILEPATH; do
+        sed -i "s/%%bg%%/$BG/g" $FILEPATH
+        sed -i "s/%%grey%%/$GREY/g" $FILEPATH
+        sed -i "s/%%grey-dark%%/$GREY_DARK/g" $FILEPATH
+        sed -i "s/%%grey-bright%%/$GREY_BRIGHT/g" $FILEPATH
+        sed -i "s/%%fg%%/$FG/g" $FILEPATH
+        sed -i "s/%%fg-dark%%/$FG_DARK/g" $FILEPATH
+        sed -i "s/%%accent%%/$ACCENT_COLOR/g" $FILEPATH
+        sed -i "s/%%contrast%%/$CONTRAST/g" $FILEPATH
+        sed -i "s/%%contrast-dark%%/$CONTRAST_DARK/g" $FILEPATH
+        sed -i "s/%%contrast-darker%%/$CONTRAST_DARKER/g" $FILEPATH
+
+        DIR="$(dirname "${FILEPATH}")"
+        FILE="$(basename "${FILEPATH}")"
+        SIZE=$(cat $FILEPATH | awk -F ' ' '/viewBox=/{print $3}')
+        convert -background none -density 768 -resize "$SIZE"x"$SIZE" $DIR/$FILE $DIR/$(echo $FILE | cut -f 1 -d '.').png
+        convert -background none -density 768 -resize "$(($SIZE*2))"x"$(($SIZE*2))" $DIR/$FILE $DIR/$(echo $FILE | cut -f 1 -d '.')@2x.png
+        convert -background none -density 768 -resize "$(($SIZE*3))"x"$(($SIZE*3))" $DIR/$FILE $DIR/$(echo $FILE | cut -f 1 -d '.')@3x.png
+        rm -rf $FILEPATH
+    done
+fi

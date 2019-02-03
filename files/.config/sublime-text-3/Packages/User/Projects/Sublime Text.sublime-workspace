@@ -1,0 +1,894 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"get",
+				"getActiveDisplays"
+			],
+			[
+				"font",
+				"font-rofi"
+			],
+			[
+				"padding-",
+				"padding-left\tproperty"
+			],
+			[
+				"padding",
+				"padding-left\tproperty"
+			],
+			[
+				"backgr",
+				"background-color\tproperty"
+			],
+			[
+				"backg",
+				"background-color\tproperty"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/home/demis/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+			"settings":
+			{
+				"buffer_size": 978,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"theme",
+				"UI: Select Theme"
+			],
+			[
+				"close",
+				"File: Close All"
+			],
+			[
+				"menu",
+				"View: Toggle Menu"
+			],
+			[
+				"res",
+				"PackageResourceViewer: Extract Package"
+			],
+			[
+				"mono",
+				"Monokai Pro: select theme"
+			],
+			[
+				"pro",
+				"Project Manager: Add New Project"
+			],
+			[
+				"sche",
+				"UI: Select Color Scheme"
+			],
+			[
+				"r",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"reou",
+				"PackageResourceViewer: Extract Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"colo",
+				"Color Helper: Index Colors in File"
+			],
+			[
+				"php",
+				"PHPCompanion:Expand Fully Qualified Class Name"
+			],
+			[
+				"settin",
+				"Preferences: Settings"
+			],
+			[
+				"comm",
+				"Toggle Comment"
+			],
+			[
+				"sett",
+				"Preferences: Settings"
+			],
+			[
+				"color",
+				"Color Helper: Index Colors in File"
+			],
+			[
+				"the",
+				"Monokai Pro: select theme"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"in",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"toggl",
+				"Toggle Comment"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"setting",
+				"Preferences: Settings"
+			],
+			[
+				"them",
+				"Monokai Pro: select theme"
+			],
+			[
+				"do",
+				"Set Syntax: Graphviz (DOT)"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"project",
+				"Project Manager: Add New Project"
+			],
+			[
+				"sideb",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				":w",
+				":w - Save"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 143.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/demis/.config/sublime-text-3",
+		"/home/demis/.config/sublime-text-3/Packages",
+		"/home/demis/.config/sublime-text-3/Packages/python-jinja2",
+		"/home/demis/.config/sublime-text-3/Packages/User",
+		"/home/demis/.config/sublime-text-3/Packages/User/Theme - Monokai Pro",
+		"/home/demis/.config/sublime-text-3/Packages/User/Themes"
+	],
+	"file_history":
+	[
+		"/home/demis/.config/sublime-text-3/Packages/User/test/images/footer/find_buffer.svg",
+		"/home/demis/.config/sublime-text-3/Packages/User/test/images/default/fold.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/default/fold.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/footer/find_buffer.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/footer/find_buffer_select.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/footer/find_case.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/footer/find_case_select.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/footer/find_context.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/footer/find_context_select.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/footer/find_highlight.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/footer/find_highlight_select.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/footer/find_regex.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/footer/find_regex_select.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/footer/find_reverse.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/footer/find_reverse_select.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/footer/find_selection.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/footer/find_selection_select.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/footer/find_whole_word.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/footer/find_whole_word_select.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/footer/find_wrap.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/footer/find_wrap_select.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/footer/input_field.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/footer/more.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/tabs/more.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/footer/more_hover.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/tabs/more_hover.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/tabs/next.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/tabs/next_hover.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/tabs/previous.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/tabs/previous_hover.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/tabs/tab_current.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/tabs/tab_hover.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/tabs/tabset_background.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/tabs/tab_current_2.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/footer/panel_background.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/footer/replace_preserve_case.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/footer/replace_preserve_case_select.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/footer/status_bar_background.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/gutter/arrow_down.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/sidebar/arrow_down.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/gutter/arrow_down_hover.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/sidebar/arrow_down_hover.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/gutter/arrow_right.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/sidebar/arrow_right.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/gutter/arrow_right_hover.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/sidebar/arrow_right_hover.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/sidebar/close.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/tabs/close.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/sidebar/close_hover.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/tabs/close_hover.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/sidebar/dirty.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/tabs/dirty.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/sidebar/folder_dup.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/sidebar/folder_dup_hover.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/sidebar/folder_loading.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/overlay/overlay.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/scrollbar/scroll_puck.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/tabs/tabset_background.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/tabs/tab_hover.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/default/fold.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/footer/find_buffer.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/footer/find_case.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/footer/find_context.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/footer/find_highlight.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/footer/find_highlight_select.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/footer/find_regex.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/footer/find_regex_select.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/footer/find_reverse.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/footer/find_reverse_select.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/footer/find_selection.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/footer/find_selection_select.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/footer/find_whole_word.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/footer/find_whole_word_select.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/footer/find_wrap.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/footer/find_wrap_select.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/footer/input_field.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/footer/more.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/tabs/more.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/footer/more_hover.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/tabs/more_hover.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/tabs/next.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/tabs/next_hover.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/tabs/previous.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/tabs/previous_hover.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/tabs/tab_current.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/footer/panel_background.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/footer/replace_preserve_case.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/footer/replace_preserve_case_select.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/footer/status_bar_background.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/gutter/arrow_down.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/sidebar/arrow_down.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/gutter/arrow_down_hover.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/sidebar/arrow_down_hover.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/gutter/arrow_right.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/sidebar/arrow_right.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/gutter/arrow_right_hover.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/sidebar/arrow_right_hover.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/sidebar/close.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/tabs/close.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/sidebar/close_hover.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/tabs/close_hover.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/sidebar/dirty.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/tabs/dirty.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/sidebar/folder_dup.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/sidebar/folder_dup_hover.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/overlay/overlay.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/scrollbar/scroll_puck.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/sidebar/folder_loading.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/tabs/tab_current_2.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/footer/find_whole_word_select",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/footer/find_whole_world_select.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/sidebar/folder_loading#.svg",
+		"/home/demis/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/demis/.config/sublime-text-3/Packages/User/Themes/test.sublime-theme",
+		"/home/demis/builds/i3-monokai/files/.config/i3/config",
+		"/home/demis/.config/sublime-text-3/Packages/Theme - Monokai Pro/Monokai Classic.tmTheme",
+		"/home/demis/builds/i3-monokai/files/.config/rofi/menu.rasi",
+		"/home/demis/builds/i3-monokai/files/.zshrc",
+		"/home/demis/builds/i3-monokai/files/.Xresources",
+		"/home/demis/builds/i3-monokai/files/.config/polybar/config",
+		"/home/demis/builds/i3-monokai/files/.config/polybar/global",
+		"/home/demis/builds/i3-monokai/install.sh",
+		"/home/demis/builds/i3-monokai/files/.config/lemonbar/time.sh",
+		"/home/demis/builds/i3-monokai/files/.config/rofi/spotlight.rasi",
+		"/home/demis/.config/sublime-text-3/Packages/User/Package Control.sublime-settings",
+		"/home/demis/builds/i3-monokai/.gitignore",
+		"/home/demis/builds/i3-monokai/files/.config/scripts/23-xres-sublime.sh",
+		"/home/demis/test.sh"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"#000000",
+			"%%grey-bright%%",
+			"#000000",
+			"%%grey-bright%%",
+			"#000000",
+			"%%grey-bright%%",
+			"#000000",
+			"height",
+			"#403e41",
+			"#19181a",
+			"#4d4d4d",
+			"#403e41",
+			"#2d2a2e",
+			"#19181a",
+			"#ffff00",
+			"%%fg-dark%%",
+			"#4d4d4d",
+			"%%fg-dark%%",
+			"#4d4d4d",
+			"%%grey-bright%%",
+			"#000000",
+			"#ffffff",
+			"%%grey-bright%%",
+			"#5b595c",
+			"#221f22",
+			"#403e41",
+			"#5b595c",
+			"%%grey-bright%%",
+			"#727072",
+			"%%grey-bright%%",
+			"#727072",
+			"#403e41",
+			"#5b595c",
+			"#221f22",
+			"%%grey-bright%%",
+			"#727072",
+			"#221f22",
+			"#5b595c",
+			"#403e41",
+			"%%grey-bright%%",
+			"#706e70",
+			"%%grey-bright%%",
+			"#706e70",
+			"%%grey-bright%%",
+			"#706e70",
+			"grey-bright",
+			"#706e70",
+			"%%grey-bright%%",
+			"#706e70",
+			"%%grey-bright%%",
+			"#716f71",
+			"%%grey-bright%%",
+			"#716f71",
+			"#221f22",
+			"#000000",
+			"#221f22",
+			"label_control",
+			"path",
+			"usage",
+			"RE",
+			"echo",
+			"exec",
+			"*",
+			"i3wm",
+			" \t\t$"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"%%grey%%",
+			"%%contrast-darker%%",
+			"%%accent%%",
+			"%%fg%%",
+			"%%fg-dark%%",
+			"%%fg%%",
+			"%%fg-dark%%",
+			"%%fg%%",
+			"%%fg-dark%%",
+			"%%grey-bright%%",
+			"%%fg%%",
+			"%%grey-bright%%",
+			"%%fg%%",
+			"%%grey-bright%%",
+			"%%fg%%",
+			"%%grey-bright%%",
+			"%%fg%%",
+			"%%grey-bright%%",
+			"%%grey%%",
+			"%%grey-dark%%",
+			"%%fg%%",
+			"%%grey-bright%%",
+			"%%fg%%",
+			"%%grey-bright%%",
+			"%%fg%%",
+			"%%grey-bright%%",
+			"%%grey-dark%%",
+			"%%fg%%",
+			"%%grey-bright%%",
+			"%%grey%%",
+			"%%fg%%",
+			"%%grey-bright%%",
+			"%%fg%%",
+			"%%grey-bright%%",
+			"%%fg%%",
+			"%%grey-bright%%",
+			"%%fg%%",
+			"%%grey-bright%%",
+			"%%fg%%",
+			"%%grey-bright%%",
+			"%%fg%%",
+			"%%grey-bright%%",
+			"%%fg%%",
+			"%%grey-bright%%",
+			"%%fg%%",
+			"%%grey-bright%%",
+			"%%fg%%",
+			"%%grey-bright%%",
+			"%%accent%%",
+			"%%grey-dark%%",
+			"%%contrast-darker%%",
+			"%%grey%%",
+			"%%grey-dark%%",
+			"%%bg%%",
+			"%%contrast-darker%%",
+			"%%yellow%%",
+			"%%fg%%",
+			"%%fg-dark%%",
+			"%%fg%%",
+			"%%fg-dark%%",
+			"%%grey-bright%%",
+			"%%fg%%",
+			"%%grey-bright%%",
+			"%%fg%%",
+			"%%grey-bright%%",
+			"%%grey%%",
+			"%%contrast-dark%%",
+			"%%grey-dark%%",
+			"%%grey%%",
+			"%%fg%%",
+			"%%grey-bright%%",
+			"%%fg%%",
+			"%%grey-bright%%",
+			"%%contrast-dark%%",
+			"%%bg%%",
+			"%%contrast-darker%%",
+			"%%fg%%",
+			"%%grey-bright%%",
+			"%%contrast-dark%%",
+			"%%grey%%",
+			"%%grey-dark%%",
+			"%%fg%%",
+			"%%grey-bright%%",
+			"%%grey%%",
+			"%%fg%%",
+			"%%grey-bright%%",
+			"%%fg%%",
+			"%%grey-bright%%",
+			"fg",
+			"%%grey-bright%%",
+			"%%fg%%",
+			"%%grey-bright%%",
+			"%%fg%%",
+			"%%grey-bright%%",
+			"%%fg%%",
+			"%%grey-bright%%",
+			"%%fg%%",
+			"%%grey-bright%%"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/home/demis/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 978,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								978,
+								978
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										976,
+										977
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										0,
+										1
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content"
+							],
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 51.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": false,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "Sublime Text.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"i3con",
+				"files/.config/i3/config"
+			],
+			[
+				"",
+				"~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings"
+			],
+			[
+				"scripts/",
+				"files/.config/scripts/23-xres-sublime.sh"
+			],
+			[
+				"i3c",
+				"files/.config/i3/config"
+			],
+			[
+				"Monok",
+				"files/.config/mondo/themes/MonokaiPro"
+			],
+			[
+				"spot",
+				"files/.config/rofi/spotlight.rasi"
+			],
+			[
+				"scrip",
+				"files/.config/scripts/41-workspace-launcher.sh"
+			],
+			[
+				".xre",
+				"files/.Xresources"
+			],
+			[
+				"glo",
+				"files/.config/rofi/global.rasi"
+			],
+			[
+				"global",
+				"files/.config/rofi/global.rasi"
+			],
+			[
+				"ris",
+				"files/.config/Xresources/base16-monokaipro-ristretto-256.Xresources"
+			],
+			[
+				"oc",
+				"files/.config/Xresources/base16-monokaipro-octagon-256.Xresources"
+			],
+			[
+				"baseoc",
+				"files/.config/Xresources/base16-monokaipro-octagon.Xresources"
+			],
+			[
+				"basema",
+				"files/.config/Xresources/base16-monokaipro-machine-256.Xresources"
+			],
+			[
+				"basecla",
+				"files/.config/Xresources/base16-monokaipro-classic-256.Xresources"
+			],
+			[
+				"base16-2",
+				"files/.config/Xresources/base16-monokaipro-256.Xresources"
+			],
+			[
+				"base",
+				"files/.config/Xresources/base16-monokaipro.Xresources"
+			],
+			[
+				"base-s",
+				"files/.config/Xresources/base16-monokaipro-spectrum.Xresources"
+			],
+			[
+				"cres-ro",
+				"files/.config/scripts/21-xres-rofi.sh"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 320.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 520.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": false,
+	"side_bar_visible": true,
+	"side_bar_width": 350.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

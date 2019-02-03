@@ -1,0 +1,10 @@
+// SublimeLinter Settings - User
+{
+    "highlights.demote_while_editing": "all",
+    "highlights.time_to_idle": 1,
+    "styles": [
+        {
+            "mark_style": "fill"
+        }
+    ]
+}

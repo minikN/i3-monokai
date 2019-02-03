@@ -1,0 +1,32 @@
+{
+	"caret_extra_bottom": 0,
+	"caret_extra_top": 0,
+	"close_windows_when_empty": false,
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"ensure_newline_at_eof_on_save": true,
+	"font_face": "Misc Termsyn",
+	"font_size": 19,
+	"hot_exit": true,
+	"ignored_packages":
+	[
+	],
+	"line_padding_bottom": 2,
+	"line_padding_top": 2,
+	"monokai_pro_file_icons": true,
+	"monokai_pro_file_icons_monochrome": false,
+	"monokai_pro_highlight_open_folders": true,
+	"monokai_pro_minimal": false,
+	"monokai_pro_panel_font_size": 10,
+	"monokai_pro_sidebar_font_size": 13,
+	"monokai_pro_sidebar_lighter": false,
+	"monokai_pro_sidebar_row_padding": 1,
+	"monokai_pro_small_scrollbar": true,
+	"monokai_pro_style_title_bar": true,
+	"monokai_pro_ui_font_face": "Misc Termsyn",
+	"open_files_in_new_window": false,
+	"save_on_focus_lost": true,
+	"scroll_past_end": true,
+	"theme": "Monokai Pro.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true
+}

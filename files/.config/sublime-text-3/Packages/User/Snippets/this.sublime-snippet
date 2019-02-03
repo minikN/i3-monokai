@@ -1,0 +1,8 @@
+<snippet>
+<content><![CDATA[
+\$this->
+]]></content>
+<tabTrigger>$</tabTrigger>
+<description>this</description>
+<scope>embedding.php, text.html.basic, meta.embedded.block.php, source.php</scope>
+</snippet>

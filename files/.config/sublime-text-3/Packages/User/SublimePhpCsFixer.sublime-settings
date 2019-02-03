@@ -1,0 +1,4 @@
+{
+    "on_save": true,
+    "config": "/home/demis/.config/.phpcsfixer"
+}

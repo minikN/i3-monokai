@@ -1,2 +1,5 @@
 .DS_Store
 ._.DS_Store
+/files/config/sublime-text-3/*
+!/files/config/sublime-text-3/Packages/Tuzk
+!files/config/sublime-text-3/Packages/User

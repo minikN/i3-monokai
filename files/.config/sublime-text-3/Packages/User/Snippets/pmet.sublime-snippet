@@ -1,0 +1,11 @@
+<snippet>
+<content><![CDATA[
+${1:private} function ${2}()
+{
+    ${0}
+}
+]]></content>
+<tabTrigger>pmet</tabTrigger>
+<description>Private/Protected Method</description>
+<scope>embedding.php, text.html.basic, meta.embedded.block.php, source.php, meta.class.php, meta.block.php</scope>
+</snippet>

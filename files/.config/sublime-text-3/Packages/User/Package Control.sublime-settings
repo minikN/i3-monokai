@@ -1,0 +1,26 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"AdvancedNewFile",
+		"BracketHighlighter",
+		"Color Highlighter",
+		"i3 wm",
+		"LiveReload",
+		"MarkdownPreview",
+		"Origami",
+		"Package Control",
+		"PackageResourceViewer",
+		"PHP Companion",
+		"PHP CS Fixer",
+		"Pretty JSON",
+		"ProjectManager",
+		"Snippet Destroyer",
+		"SnippetMaker",
+		"SublimeLinter",
+		"SublimeLinter-php"
+	]
+}

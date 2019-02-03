@@ -1,0 +1,78 @@
+{
+	"file_extensions":
+	[
+		"all"
+	],
+	"search_colors_in":
+	{
+		"all_content":
+		{
+			"color_highlighters":
+			{
+				"color_scheme":
+				{
+					"enabled": false,
+					"highlight_style": "outlined"
+				},
+				"gutter_icons":
+				{
+					"enabled": false,
+					"icon_style": "circle"
+				},
+				"phantoms":
+				{
+					"enabled": true,
+					"length": 2,
+					"style": "left"
+				}
+			},
+			"enabled": true
+		},
+		"hover":
+		{
+			"color_highlighters":
+			{
+				"color_scheme":
+				{
+					"enabled": false,
+					"highlight_style": "filled"
+				},
+				"gutter_icons":
+				{
+					"enabled": false,
+					"icon_style": "circle"
+				},
+				"phantoms":
+				{
+					"enabled": false,
+					"length": 2,
+					"style": "right"
+				}
+			},
+			"enabled": true
+		},
+		"selection":
+		{
+			"color_highlighters":
+			{
+				"color_scheme":
+				{
+					"enabled": false,
+					"highlight_style": "filled"
+				},
+				"gutter_icons":
+				{
+					"enabled": false,
+					"icon_style": "circle"
+				},
+				"phantoms":
+				{
+					"enabled": false,
+					"length": 2,
+					"style": "right"
+				}
+			},
+			"enabled": false
+		}
+	}
+}

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 24 24"
+   id="svg2179"
+   version="1.1"
+   sodipodi:docname="find_regex.svg"
+   inkscape:version="0.92.4 5da689c313, 2019-01-14">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1236"
+     inkscape:window-height="1347"
+     id="namedview1270"
+     showgrid="false"
+     inkscape:zoom="25.666667"
+     inkscape:cx="12"
+     inkscape:cy="12"
+     inkscape:window-x="1287"
+     inkscape:window-y="56"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2179" />
+  <metadata
+     id="metadata2185">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs2183" />
+  <path
+     id="rect2189"
+     d="m 7.3048611,8.0474564 -3.929707,4.7927346 1.05252,1.283261 2.890078,-3.524941 2.8771869,3.509473 1.039629,-1.267793 z"
+     style="display:inline;opacity:1;fill-opacity:0.99607843;stroke:none;stroke-width:0.41833657;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99607843;paint-order:normal;fill:%%grey-bright%%"
+     inkscape:connector-curvature="0" />
+  <text
+     id="text2209"
+     y="16.787201"
+     x="11.455246"
+     style="font-style:normal;font-weight:normal;font-size:13.19999981px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill-opacity:1;stroke:none;stroke-width:0.33000001;fill:%%grey-bright%%;"
+     xml:space="preserve"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.60000038px;font-family:'Nimbus Mono PS';-inkscape-font-specification:'Nimbus Mono PS Bold';fill-opacity:1;stroke-width:0.33000001;fill:%%grey-bright%%;"
+       y="16.787201"
+       x="11.455246"
+       id="tspan2207">$</tspan></text>
+</svg>

@@ -1,0 +1,13 @@
+<snippet>
+<content><![CDATA[
+${3:namespace ${2}\\${1:${TM_FILENAME/(.+)\.[^.]+$/$1/}};}
+
+class ${1:$TM_FILENAME}${5: extends ${4}}
+{
+    ${0}
+}
+]]></content>
+<tabTrigger>clse</tabTrigger>
+<description>Extended Class</description>
+<scope>embedding.php, text.html.basic, meta.embedded.block.php, source.php, meta.class.php, storage.type.class.php</scope>
+</snippet>

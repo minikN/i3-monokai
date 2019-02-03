@@ -1,0 +1,8 @@
+{
+    "search_threshold": 20000,
+    "user_bracket_styles": {
+            "default": {
+              "style": "outline"
+        }
+    }
+}

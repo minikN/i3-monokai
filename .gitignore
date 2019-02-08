@@ -7,3 +7,6 @@ files/.config/sublime-text-3/Packages/*
 !files/.config/sublime-text-3/Packages/User
 
 files/.config/sublime-text-3/Packages/User/Projects/*.sublime-workspace
+files/.config/sublime-text-3/Packages/User/ColorHighlighter
+files/.config/sublime-text-3/Packages/User/Package Control.cache
+files/.config/sublime-text-3/Packages/User/Theme - Monokai Pro

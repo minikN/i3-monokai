@@ -23,7 +23,7 @@ green           #bad761
 purple          #c39ac9
 orange          #ff9b5e
 cyan            #9cd1bb
-accent          grey-dark
+accent-color    yellow
 
 sublTheme       Theme - Monokai Pro
 sublScheme      Monokai Pro (Filter Octagon)

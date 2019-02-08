@@ -2,7 +2,7 @@
     {
         "settings":
         [
-            "monokai_pro_style_title_bar"
+            "false"
         ],
         "class": "title_bar",
         "bg":
@@ -21,8 +21,8 @@
     {
         "settings":
         [
-            "monokai_pro_style_title_bar",
-            "monokai_pro_minimal"
+            "false",
+            "false"
         ],
         "class": "title_bar",
         "bg":
@@ -85,8 +85,8 @@
         "class": "icon_file_type",
         "settings":
         [
-            "!monokai_pro_sidebar_lighter",
-            "!monokai_pro_file_icons_monochrome"
+            "true",
+            "true"
         ],
         "layer0.opacity": 0.85
     },
@@ -94,7 +94,7 @@
         "class": "icon_file_type",
         "settings":
         [
-            "monokai_pro_file_icons_monochrome"
+            "false"
         ],
         "layer0.opacity": 1,
         "layer0.tint":
@@ -108,7 +108,7 @@
         "class": "icon_file_type",
         "settings":
         [
-            "monokai_pro_file_icons_monochrome"
+            "false"
         ],
         "parents":
         [
@@ -131,8 +131,8 @@
         "class": "icon_file_type",
         "settings":
         [
-            "monokai_pro_file_icons_monochrome",
-            "!monokai_pro_sidebar_lighter"
+            "false",
+            "true"
         ],
         "layer0.opacity": 1,
         "layer0.tint":
@@ -146,8 +146,8 @@
         "class": "icon_file_type",
         "settings":
         [
-            "monokai_pro_file_icons_monochrome",
-            "!monokai_pro_sidebar_lighter"
+            "false",
+            "true"
         ],
         "parents":
         [
@@ -381,7 +381,7 @@
         "class": "puck_control",
         "settings":
         [
-            "monokai_pro_small_scrollbar"
+            true
         ],
         "layer0.texture": "",
         "layer0.tint":
@@ -415,7 +415,7 @@
         "class": "sidebar_container",
         "settings":
         [
-            "monokai_pro_minimal"
+            "false"
         ],
         "content_margin":
         [
@@ -445,7 +445,7 @@
         "class": "sidebar_tree",
         "settings":
         [
-            "monokai_pro_minimal"
+            "false"
         ],
         "layer0.tint":
         [
@@ -478,7 +478,7 @@
         "class": "sidebar_heading",
         "settings":
         [
-            "monokai_pro_minimal"
+            "false"
         ],
         "color":
         [
@@ -496,14 +496,14 @@
             %%fg-dark_B%%
         ],
         "font.bold": false,
-        "font.face": "Misc Termsyn",
-        "font.size": 13
+        "font.face": "%%font%%",
+        "font.size": %%fontsize_lg%%
     },
     {
         "class": "sidebar_label",
         "settings":
         [
-            "!monokai_pro_sidebar_lighter"
+            "true"
         ],
         "color":
         [
@@ -573,7 +573,7 @@
         "class": "sidebar_label",
         "settings":
         [
-            "monokai_pro_highlight_open_folders"
+            true
         ],
         "parents":
         [
@@ -691,7 +691,7 @@
         "class": "tabset_control",
         "settings":
         [
-            "monokai_pro_minimal"
+            "false"
         ],
         "layer0.tint":
         [
@@ -735,7 +735,7 @@
         "class": "tab_control",
         "settings":
         [
-            "monokai_pro_minimal"
+            "false"
         ],
         "layer0.tint":
         [
@@ -792,10 +792,10 @@
             0,
             0
         ],
-        "font.size": 12,
+        "font.size": %%fontsize_md%%,
         "font.italic": false,
         "font.bold": false,
-        "font.face": "Misc Termsyn"
+        "font.face": "%%font%%"
     },
     {
         "class": "tab_label",
@@ -1076,9 +1076,9 @@
         "class": "minimap_control",
         "viewport_color":
         [
-            %%fg_R%%,
-            %%fg_G%%,
-            %%fg_B%%,
+            %%fg-white_R%%,
+            %%fg-white_G%%,
+            %%fg-white_B%%,
             0.047
         ]
     },
@@ -1088,23 +1088,12 @@
         [
             16,
             8
-        ],
-        "border_size": 1,
-        "border_color":
-        [
-            %%contrast-darker_R%%,
-            %%contrast-darker_G%%,
-            %%contrast-darker_B%%
         ]
     },
     {
         "class": "status_bar",
+        "layer0.texture":"%%dir%%/footer/status_bar_background.png",
         "layer0.opacity": 1,
-        "layer0.tint": [
-            %%bg_R%%,
-            %%bg_G%%,
-            %%bg_B%%
-        ],
         "layer0.inner_margin":
         [
             8,
@@ -1120,7 +1109,7 @@
         "class": "status_bar",
         "settings":
         [
-            "monokai_pro_minimal"
+            "false"
         ],
         "layer0.texture": "",
         "layer0.tint":
@@ -1162,9 +1151,9 @@
             0
         ],
         "font.bold": false,
-        "font.size": 12,
+        "font.size": %%fontsize_md%%,
         "font.italic": false,
-        "font.face": "Misc Termsyn"
+        "font.face": "%%font%%"
     },
     {
         "class": "label_control",
@@ -1367,7 +1356,7 @@
         "class": "panel_control",
         "settings":
         [
-            "monokai_pro_minimal"
+            "false"
         ],
         "layer0.texture": "",
         "layer0.tint":
@@ -1397,8 +1386,8 @@
         "layer1.opacity": 0,
         "content_margin":
         [
-            %%contrast-dark_B%%,
-            %%contrast-dark_B%%
+            40,
+            40
         ]
     },
     {
@@ -1467,8 +1456,8 @@
             %%yellow_G%%,
             %%yellow_B%%
         ],
-        "font.face": "Misc Termsyn",
-        "font.size": 10
+        "font.face": "%%font%%",
+        "font.size": %%fontsize_md%%
     },
     {
         "class": "quick_panel_path_label",
@@ -1496,7 +1485,7 @@
             %%fg-dark_G%%,
             %%fg-dark_B%%
         ],
-        "font.face": "Misc Termsyn"
+        "font.face": "%%font%%"
     },
     {
         "class": "mini_quick_panel_row",
@@ -1601,7 +1590,7 @@
             %%fg_G%%,
             %%fg_B%%
         ],
-        "font.face": "Misc Termsyn"
+        "font.face": "%%font%%"
     },
     {
         "class": "icon_regex",
@@ -2004,7 +1993,7 @@
         "class": "grid_layout_control",
         "settings":
         [
-            "monokai_pro_minimal"
+            "false"
         ],
         "border_size": 0
     },

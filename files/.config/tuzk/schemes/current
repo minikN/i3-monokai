@@ -1,24 +1,24 @@
-SCHEME_NAME	MonokaiPro
-sublScheme	Monokai Pro
+SCHEME_NAME	MonokaiPro-Classic
+sublScheme	Monokai Classic
 sublTheme	Theme - Monokai Pro
-accent	#403e41
-cyan	#78dce8
-orange	#fc9867
-purple	#ab9df2
-green	#a9dc76
-yellow	#ffd866
-red	#ff6188
-contrast-darker	#19181a
-contrast-dark	#221f22
-contrast	#5b595c
+accent-color	#e4db73
+cyan	#66d9ee
+orange	#fc961f
+purple	#ae81ff
+green	#a6e12d
+yellow	#e4db73
+red	#f82570
+contrast-darker	#161613
+contrast-dark	#1d1e19
+contrast	#57584f
 fg-white	#ffffff
-fg-bright	#fefefd
-fg-dark	#939293
-fg	#fcfcfa
-grey-bright	#727072
-grey-dark	#403e41
-grey	#5b595c
-bg	#2d2a2e
+fg-bright	#fefff8
+fg-dark	#919288
+fg	#fdfff1
+grey-bright	#6e7066
+grey-dark	#3b3c35
+grey	#57584f
+bg	#272821
 fontsize_slg	18
 fontsize_lg	13
 fontsize_md2	12

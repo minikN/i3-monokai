@@ -8,7 +8,7 @@
 THEME="$(tuzk -r sublTheme)"
 SCHEME="$(tuzk -r sublScheme)"
 
-PKGCTL_DIR=~/.config/sublime-text-3/Packages/User
+PKGCTL_DIR=$HOME/.config/sublime-text-3/Packages/User
 SUBL_SETTINGS="Preferences.sublime-settings"
 
 if [[ -n $SCHEME ]]; then

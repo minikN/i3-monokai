@@ -7,10 +7,36 @@
 
 THEME="$(tuzk --current)"
 SUBL_SETTINGS="Preferences.sublime-settings"
-PKGCTL_DIR=~/.config/sublime-text-3/Packages/User
+LINT_SETTINGS="SublimeLinter.sublime-settings"
+GIT_SETTINGS="GitGutter.sublime-settings"
+PKGCTL_DIR=$HOME/.config/sublime-text-3/Packages/User
 
+cp -r "$PKGCTL_DIR/Themes/Tuzk/Tuzk.gitgutter-theme" "$PKGCTL_DIR/Themes/$THEME/git/$THEME.gitgutter-theme"
+cp -r "$PKGCTL_DIR/Themes/Tuzk/Tuzk.sublime-theme" "$PKGCTL_DIR/Themes/$THEME/$THEME.sublime-theme"
+cp -r "$PKGCTL_DIR/Themes/Tuzk/Tuzk.gutter-theme" "$PKGCTL_DIR/Themes/$THEME/$THEME.gutter-theme"
 
-sed -i "s/%%dir%%/User\/$THEME\/images/g" "$PKGCTL_DIR/Themes/Tuzk.sublime-theme"
+cp -r "$PKGCTL_DIR/Themes/Tuzk/err.png" "$PKGCTL_DIR/Themes/$THEME/err.png"
+cp -r "$PKGCTL_DIR/Themes/Tuzk/err@2x.png" "$PKGCTL_DIR/Themes/$THEME/err@2x.png"
+cp -r "$PKGCTL_DIR/Themes/Tuzk/err@3x.png" "$PKGCTL_DIR/Themes/$THEME/err@3x.png"
+cp -r "$PKGCTL_DIR/Themes/Tuzk/warn.png" "$PKGCTL_DIR/Themes/$THEME/warn.png"
+cp -r "$PKGCTL_DIR/Themes/Tuzk/warn@2x.png" "$PKGCTL_DIR/Themes/$THEME/warn@2x.png"
+cp -r "$PKGCTL_DIR/Themes/Tuzk/warn@3x.png" "$PKGCTL_DIR/Themes/$THEME/warn@3x.png"
 
-mv "$PKGCTL_DIR/Themes/Tuzk.sublime-theme" "$PKGCTL_DIR/Themes/$THEME.sublime-theme"
+sed -i "s/%%dir%%/User\/Themes\/$THEME\/images/g" "$PKGCTL_DIR/Themes/$THEME/$THEME.sublime-theme"
 sed -i --follow-symlinks "/theme/c\\\"theme\": \"$THEME.sublime-theme\"," "$PKGCTL_DIR/$SUBL_SETTINGS"
+
+# SublimeLinter Gutter Theme
+if [[ -n $PKGCTL_DIR/$LINT_SETTINGS ]]; then
+    echo "INFO: Found SublimeLinter Plugin. Changing gutter theme to $THEME."
+    sed -i --follow-symlinks "/gutter_theme/c\\\"gutter_theme\": \"Packages/User/Themes/$THEME/$THEME.gutter-theme\"," "$PKGCTL_DIR/$LINT_SETTINGS"
+else
+    echo "WARNING: SublimeLinter configuration not found. Not applying gutter theme."
+fi
+
+# GitGutter
+if [[ -n $PKGCTL_DIR/$GIT_SETTINGS ]]; then
+    echo "INFO: Found GitGutter Plugin. Changing git gutter theme to $THEME."
+    sed -i --follow-symlinks "/theme/c\\\"theme\": \"$THEME.gitgutter-theme\"," "$PKGCTL_DIR/$GIT_SETTINGS"
+else
+    echo "WARNING: GitGutter configuration not found. Not applying git gutter theme."
+fi

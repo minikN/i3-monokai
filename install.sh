@@ -25,7 +25,7 @@ declare -a FILES=(
 	".config/backgrounds"
 	".config/scripts"
 	".config/rofi"
-	".config/mondo"
+	".config/sublime-text-3"
     ".config/tuzk"
 	".config/Xresources"
 )

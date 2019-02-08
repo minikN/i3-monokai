@@ -22,7 +22,7 @@ green           #a6e12d
 purple          #ae81ff
 orange          #fc961f
 cyan            #66d9ee
-accent           grey-dark
+accent-color    yellow
 
 sublTheme       Theme - Monokai Pro
 sublScheme      Monokai Classic

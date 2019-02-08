@@ -2,7 +2,13 @@
 	"folders":
 	[
 		{
-			"path": "~/builds/Tuzk"
-		}
+            "name": "Source",
+			"path": "~/builds/Tuzk",
+            "folder_exclude_patterns": ["vendor"]
+		},
+        {
+            "name": "Configuration",
+            "path": "~/.config/tuzk"
+        }
 	]
 }

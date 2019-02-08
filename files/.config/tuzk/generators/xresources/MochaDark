@@ -1,0 +1,54 @@
+#define FONT                Misc Termsyn
+#define MONO_FONT           Inconsolata
+#define FONT_SIZE_S         8
+#define FONT_SIZE_M         10
+#define FONT_SIZE_L         13
+
+#define MONO_FONT_SIZE_S    10
+#define MONO_FONT_SIZE_M    13
+#define MONO_FONT_SIZE_L    18
+
+#define base00 #3B3228
+#define base01 #5F574A
+#define base02 #7E705A
+#define base03 #7E705A
+#define base04 #D0C8C6
+#define base05 #D0C8C6
+#define base06 #F5EEEB
+#define base07 #ffffff
+#define base08 #CB6077
+#define base09 #29231c
+#define base0A #BEB55B
+#define base0B #7BBDA4
+#define base0C #8AB3B5
+#define base0D #A89BB9
+#define base0E #F4BC87
+#define base0F #332b22
+#define baseCC #5F574A
+
+*foreground:   base05
+*background:   base00
+*cursorColor:  base05
+
+*color0:       base00
+*color1:       base08
+*color2:       base0B
+*color3:       base0A
+*color4:       base0D
+*color5:       base0E
+*color6:       base0C
+*color7:       base05
+*color8:       base03
+*color9:       base08
+*color10:      base0B
+*color11:      base0A
+*color12:      base0D
+*color13:      base0E
+*color14:      base0C
+*color15:      base07
+*color16:      base09
+*color17:      base0F
+*color18:      base01
+*color19:      base02
+*color20:      base04
+*color21:      base06

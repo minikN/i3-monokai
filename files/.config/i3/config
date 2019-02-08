@@ -1,13 +1,13 @@
 # ------------------------- GLOBAL VARS  -------------------------
-set $mod 					Mod4
-set $alt 					Mod1
-font 						pango:Misc Termsyn 13
-set_from_resource			$TERMINAL	st.title
-set_from_resource			$TERM_FONT  st.font
-set_from_resource			$CALC_FONT  st.font
-set $SEARCH 				"rofi -show drun -show-icons true -theme spotlight"
+set $mod                    Mod4
+set $alt                    Mod1
+font                        pango:Misc Termsyn 13
+set_from_resource           $TERMINAL   st.title
+set_from_resource           $TERM_FONT  st.font
+set_from_resource           $CALC_FONT  st.font
+set $SEARCH                 "rofi -show drun -show-icons true -theme spotlight"
 
-set $SCRIPTS				$HOME/.config/scripts
+set $SCRIPTS                $HOME/.config/scripts
 
 
 
@@ -15,23 +15,23 @@ set $SCRIPTS				$HOME/.config/scripts
 
 # ------------------------- COMMON  -------------------------
 # General settings
-new_window 					1pixel
-default_border 				pixel 4
-default_floating_border 	none
-hide_edge_borders 			both
+new_window                  1pixel
+default_border              pixel 4
+default_floating_border     none
+hide_edge_borders           both
 
 # start a terminal
-bindsym $mod+Return 		exec --no-startup-id $TERMINAL -f "$TERM_FONT"
+bindsym $mod+Return         exec --no-startup-id $TERMINAL -f "$TERM_FONT"
 
 # kill focused window
-bindsym $mod+Shift+q 		kill
+bindsym $mod+Shift+q        kill
 
 # reload the configuration file
-bindsym $mod+Shift+c 		reload
+bindsym $mod+Shift+c        reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r 		restart
+bindsym $mod+Shift+r        restart
 # exit i3 (logs you out of your X session)
-#bindsym $mod+Shift+e 		exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+#bindsym $mod+Shift+e       exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # Set XRandR settings
 exec --no-startup-id xrandr --output DP-0 --primary --mode 2560x1440 --pos 0x0 --rotate normal --output DVI-D-0 --off --output HDMI-1 --off --output DP-1 --off --output HDMI-0 --mode 2560x1440 --pos 2560x0 --rotate normal
@@ -41,22 +41,20 @@ exec --no-startup-id xrandr --output DP-0 --primary --mode 2560x1440 --pos 0x0 -
 
 
 # ------------------------- MULTIMEDIA KEYS  -------------------------
-bindsym XF86Sleep			exec --no-startup-id $SCRIPTS/30-manage-i3.sh menu
+bindsym XF86Sleep           exec --no-startup-id $SCRIPTS/30-manage-i3.sh menu
 
 
 
 
 # ------------------------- COLORS  -------------------------
-# using ~/.Xresources
-set_from_resource 			$fg-color 	i3.foreground
-set_from_resource 			$bg-color 	i3.background
-set_from_resource 			$contrast-color i3.color18
-set_from_resource 			$red-color 	    i3.color1
-set_from_resource 			$green-color 	i3.color2
-set_from_resource 			$yellow-color 	i3.color3
-set_from_resource 			$orange-color 	i3.color4
-set_from_resource 			$purple-color 	i3.color5
-set_from_resource 			$cyan-color 	i3.color6
+set $fg-color #fdfff1
+set $bg-color #272821
+set $contrast-color #3b3c35
+set $red-color #f82570
+set $green-color #a6e12d
+set $yellow-color #e4db73
+set $orange-color #fc961f
+set $purple-color #ae81ff
 
 # class                     border  	       backgr. 	    text    	    indicator 	    child_border
 client.focused          	$contrast-color    $bg-color	$yellow-color	$contrast-color	$contrast-color

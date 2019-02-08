@@ -1,0 +1,9 @@
+// GitGutter Settings - User
+{
+"theme": "Materia.gitgutter-theme",
+    "protected_regions": [
+        "sublimelinter-warning-gutter-marks",
+        "sublimelinter-error-gutter-marks",
+        "sublime_linter.protected_regions"
+    ]
+}

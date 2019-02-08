@@ -1,0 +1,26 @@
+## NAME		MochaDark
+## AUTHOR	demis
+## CREATED	04-02-2019
+
+## Colors
+bg              #3B3228
+grey            #7E705A
+grey-dark       #5F574A
+grey-bright     #7E705A
+
+fg              #D0C8C6
+fg-dark         #D0C8C6
+fg-bright       #F5EEEB
+fg-white        #ffffff
+
+contrast        grey
+contrast-dark   #332b22
+contrast-darker #29231c
+
+red             #CB6077
+yellow          #BEB55B
+green           #7BBDA4
+purple          #A89BB9
+orange          #F4BC87
+cyan            #8AB3B5
+accent-color    yellow

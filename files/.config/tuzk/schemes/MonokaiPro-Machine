@@ -23,7 +23,7 @@ green           #a2e57b
 purple          #baa0f8
 orange          #ffb270
 cyan            #7cd5f1
-accent          grey-dark
+accent-color    yellow
 
 sublTheme       Theme - Monokai Pro
 sublScheme      Monokai Pro (Filter Machine)

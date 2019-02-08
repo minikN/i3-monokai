@@ -2,10 +2,10 @@
 	"caret_extra_bottom": 0,
 	"caret_extra_top": 0,
 	"close_windows_when_empty": false,
-	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"color_scheme": "Packages/Theme - Monokai Pro/Monokai Classic.tmTheme",
 	"ensure_newline_at_eof_on_save": true,
 	"font_face": "Misc Termsyn",
-	"font_size": 19,
+	"font_size": 10,
 	"hot_exit": true,
 	"ignored_packages":
 	[
@@ -26,7 +26,7 @@
 	"open_files_in_new_window": false,
 	"save_on_focus_lost": true,
 	"scroll_past_end": true,
-	"theme": "Monokai Pro.sublime-theme",
+	"theme": "Monokai Classic.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true
 }

@@ -1,0 +1,27 @@
+* {
+    /* These variables get changed automatically through
+     * the shell script.
+     */
+
+    bg: #3B3228;
+    grey: #7E705A;
+    grey-dark: #5F574A;
+    grey-bright: #7E705A;
+    fg: #D0C8C6;
+    fg-dark: #D0C8C6;
+    fg-bright: #F5EEEB;
+    fg-white: #ffffff;
+    contrast: #7E705A;
+    contrast-dark: #332b22;
+    contrast-darker: #29231c;
+    red: #CB6077;
+    yellow: #BEB55B;
+    green: #7BBDA4;
+    purple: #A89BB9;
+    orange: #F4BC87;
+    cyan: #8AB3B5;
+    accent: #5F574A;
+    highlight: bold #BEB55B;
+    font-rofi: "Misc Termsyn 8";
+    mono-rofi: "Inconsolata 10";
+}

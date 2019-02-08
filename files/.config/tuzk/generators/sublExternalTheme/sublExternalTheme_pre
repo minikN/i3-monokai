@@ -7,23 +7,32 @@
 
 SCHEME="$(tuzk --current)"
 BG="$(tuzk -r bg)"
+FG="$(tuzk -r fg)"
+RED="$(tuzk -r red)"
 GREY="$(tuzk -r grey)"
+PURPLE="$(tuzk -r purple)"
+YELLOW="$(tuzk -r yellow)"
+FG_DARK="$(tuzk -r fg-dark)"
+CONTRAST="$(tuzk -r contrast)"
 GREY_DARK="$(tuzk -r grey-dark)"
 GREY_BRIGHT="$(tuzk -r grey-bright)"
-FG="$(tuzk -r fg)"
-FG_DARK="$(tuzk -r fg-dark)"
 ACCENT_COLOR="$(tuzk -r accent-color)"
-CONTRAST="$(tuzk -r contrast)"
 CONTRAST_DARK="$(tuzk -r contrast-dark)"
 CONTRAST_DARKER="$(tuzk -r contrast-darker)"
 
-PKGCTL_DIR=~/.config/sublime-text-3/Packages/
-if [[ ! -d "$PKGCTL_DIR/User/$SCHEME" ]]; then
-    echo "INFO: Applying $SCHEME for the first time. Creating necessary folders and files.."
-    mkdir -p "$PKGCTL_DIR/User/$SCHEME/images"
-    cp -r "$PKGCTL_DIR/Tuzk/images" "$PKGCTL_DIR/User/$SCHEME/"
+THEME_DIR=$HOME/.config/sublime-text-3/Packages/User/Themes
 
-    find "$PKGCTL_DIR/User/$SCHEME/images" -maxdepth 2 -type f | while read -r FILEPATH; do
+if [[ ! -d "$THEME_DIR/$SCHEME/images" ]]; then
+    echo "INFO: Applying $SCHEME for the first time. Creating necessary folders and files.."
+    mkdir -p "$THEME_DIR/$SCHEME/images"
+    mkdir -p "$THEME_DIR/$SCHEME/file_types"
+    cp -r "$THEME_DIR/Tuzk/images" "$THEME_DIR/$SCHEME/"
+    cp -r "$THEME_DIR/Tuzk/file_types" "$THEME_DIR/$SCHEME/"
+    cp -r "$THEME_DIR/Tuzk/icons" "$THEME_DIR/$SCHEME/"
+    cp -r "$THEME_DIR/Tuzk/git" "$THEME_DIR/$SCHEME/"
+
+    ## Processing Images
+    find "$THEME_DIR/$SCHEME/images" -maxdepth 2 -type f | while read -r FILEPATH; do
         sed -i "s/%%bg%%/$BG/g" $FILEPATH
         sed -i "s/%%grey%%/$GREY/g" $FILEPATH
         sed -i "s/%%grey-dark%%/$GREY_DARK/g" $FILEPATH
@@ -38,9 +47,26 @@ if [[ ! -d "$PKGCTL_DIR/User/$SCHEME" ]]; then
         DIR="$(dirname "${FILEPATH}")"
         FILE="$(basename "${FILEPATH}")"
         SIZE=$(cat $FILEPATH | awk -F ' ' '/viewBox=/{print $3}')
-        convert -background none -density 768 -resize "$SIZE"x"$SIZE" $DIR/$FILE $DIR/$(echo $FILE | cut -f 1 -d '.').png
-        convert -background none -density 768 -resize "$(($SIZE*2))"x"$(($SIZE*2))" $DIR/$FILE $DIR/$(echo $FILE | cut -f 1 -d '.')@2x.png
-        convert -background none -density 768 -resize "$(($SIZE*3))"x"$(($SIZE*3))" $DIR/$FILE $DIR/$(echo $FILE | cut -f 1 -d '.')@3x.png
+        inkscape -z -e $DIR/$(echo $FILE | cut -f 1 -d '.').png -w $SIZE -h $SIZE $DIR/$FILE
+        inkscape -z -e $DIR/$(echo $FILE | cut -f 1 -d '.')@2x.png -w $(($SIZE*2)) -h $(($SIZE*2)) $DIR/$FILE
+        inkscape -z -e $DIR/$(echo $FILE | cut -f 1 -d '.')@3x.png -w $(($SIZE*3)) -h $(($SIZE*3)) $DIR/$FILE
         rm -rf $FILEPATH
     done
+
+    ## Processings Widget
+    WIDGET="$THEME_DIR/Tuzk/Widget.stTheme"
+    WIDGET_SETTINGS="$THEME_DIR/Tuzk/Widget.sublime-settings"
+    THEME_WIDGET="$THEME_DIR/$SCHEME/Widget.stTheme"
+    THEME_WIDGET_SETTINGS="$THEME_DIR/../Widget.sublime-settings"
+
+    cp -r "$WIDGET" "$THEME_WIDGET"
+    sed -i "s/%%grey%%/$GREY/g" "$THEME_WIDGET"
+    sed -i "s/%%grey-dark%%/$GREY_DARK/g" "$THEME_WIDGET"
+    sed -i "s/%%fg%%/$FG/g" "$THEME_WIDGET"
+    sed -i "s/%%red%%/$RED/g" "$THEME_WIDGET"
+    sed -i "s/%%purple%%/$PURPLE/g" "$THEME_WIDGET"
+    sed -i "s/%%yellow%%/$YELLOW/g" "$THEME_WIDGET"
+
+    cp -r "$WIDGET_SETTINGS" "$THEME_WIDGET_SETTINGS"
+    sed -i --follow-symlinks "/color_scheme/c\\\"color_scheme\": \"Packages/User/Themes/$SCHEME/Widget.stTheme\"," "$THEME_WIDGET_SETTINGS"
 fi

@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# POST-APPLY script for i3.
+# This is a bash script. Tuzk will run this script after the i3 generator
+# is applied. Tuzk will also create temporary global theme variables for you to
+# use for the lifetime of the script.
+
+CONFIG="$HOME/.config/i3/config"
+
+BG="$(tuzk -r bg)"
+FG="$(tuzk -r fg)"
+RED="$(tuzk -r red)"
+CYAN="$(tuzk -r cyan)"
+GREEN="$(tuzk -r green)"
+ORANGE="$(tuzk -r orange)"
+PURPLE="$(tuzk -r purple)"
+YELLOW="$(tuzk -r yellow)"
+GREY_DARK="$(tuzk -r grey-dark)"
+
+if [[ -e $CONFIG ]]; then
+    sed -i --follow-symlinks "/set \$fg-color/c\set \$fg-color $FG" $CONFIG
+    sed -i --follow-symlinks "/set \$bg-color/c\\set \$bg-color $BG" $CONFIG
+    sed -i --follow-symlinks "/set \$contrast-color/c\\set \$contrast-color $GREY_DARK" $CONFIG
+    sed -i --follow-symlinks "/set \$red-color/c\\set \$red-color $RED" $CONFIG
+    sed -i --follow-symlinks "/set \$green-color/c\\set \$green-color $GREEN" $CONFIG
+    sed -i --follow-symlinks "/set \$yellow-color/c\\set \$yellow-color $YELLOW" $CONFIG
+    sed -i --follow-symlinks "/set \$orange-color/c\\set \$orange-color $ORANGE" $CONFIG
+    sed -i --follow-symlinks "/set \$purple-color/c\\set \$purple-color $PURPLE" $CONFIG
+    sed -i --follow-symlinks "/set \$cyan-color/c\\set \$cyan-color $CYAN" $CONFIG
+fi
+
+i3-msg restart

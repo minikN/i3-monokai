@@ -1,10 +1,24 @@
 // SublimeLinter Settings - User
 {
-    "highlights.demote_while_editing": "all",
-    "highlights.time_to_idle": 1,
+"gutter_theme": "Packages/User/Themes/Materia/Materia.gutter-theme",
     "styles": [
         {
-            "mark_style": "fill"
+            "mark_style": "none",
+            "priority": 1,
+            "scope": "region.orangish",
+            "icon": "warn",
+            "types": [
+                "warning"
+            ]
+        },
+        {
+            "mark_style": "none",
+            "priority": 1,
+            "scope": "region.redish",
+            "icon": "err",
+            "types": [
+                "error"
+            ]
         }
     ]
 }

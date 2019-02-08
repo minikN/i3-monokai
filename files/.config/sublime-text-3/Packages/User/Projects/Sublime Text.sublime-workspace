@@ -31,14 +31,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "/home/demis/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
-			"settings":
-			{
-				"buffer_size": 978,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -52,16 +44,16 @@
 		"selected_items":
 		[
 			[
-				"remove",
-				"Package Control: Remove Package"
-			],
-			[
-				"theme",
-				"UI: Select Theme"
+				"tabs",
+				"View: Toggle Tabs"
 			],
 			[
 				"close",
 				"File: Close All"
+			],
+			[
+				"mono",
+				"Monokai Pro: select theme"
 			],
 			[
 				"menu",
@@ -72,8 +64,48 @@
 				"PackageResourceViewer: Extract Package"
 			],
 			[
-				"mono",
+				"sublime",
+				"Preferences: SublimeLinter Settings"
+			],
+			[
+				"monokai",
 				"Monokai Pro: select theme"
+			],
+			[
+				"theme",
+				"UI: Select Theme"
+			],
+			[
+				"re",
+				"PackageResourceViewer: Extract Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"resou",
+				"PackageResourceViewer: Extract Package"
+			],
+			[
+				"this",
+				"BracketHighlighter: Tag Settings"
+			],
+			[
+				"THEME",
+				"Monokai Pro: select theme"
+			],
+			[
+				"toggle",
+				"View: Toggle Menu"
+			],
+			[
+				"resour",
+				"PackageResourceViewer: Extract Package"
 			],
 			[
 				"pro",
@@ -90,10 +122,6 @@
 			[
 				"reou",
 				"PackageResourceViewer: Extract Package"
-			],
-			[
-				"install",
-				"Package Control: Install Package"
 			],
 			[
 				"colo",
@@ -180,9 +208,26 @@
 	},
 	"console":
 	{
-		"height": 143.0,
+		"height": 152.0,
 		"history":
 		[
+			"open_file \"/home/demis/.zshrc",
+			"open_file \"/home/demis/.zshrc\"",
+			"open_file \"~/.zshrc\"",
+			"open_file ~/.zshrc",
+			"open_file",
+			"install_package '{\\\"test\\\"}'",
+			"install_package '{l:a}'",
+			"install_package 'l:a'",
+			"install_package 'l'",
+			"install_package l",
+			"install_package ",
+			"install_package {\\\"name\\\": \\\"test\\\"}",
+			"install_package {\\\"test\\\"}",
+			"install_package {\"test\"}",
+			"install_package \"test\"",
+			"install_package test",
+			"install_package",
 			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
 		]
 	},
@@ -199,13 +244,44 @@
 	[
 		"/home/demis/.config/sublime-text-3",
 		"/home/demis/.config/sublime-text-3/Packages",
-		"/home/demis/.config/sublime-text-3/Packages/python-jinja2",
-		"/home/demis/.config/sublime-text-3/Packages/User",
-		"/home/demis/.config/sublime-text-3/Packages/User/Theme - Monokai Pro",
-		"/home/demis/.config/sublime-text-3/Packages/User/Themes"
+		"/home/demis/.config/sublime-text-3/Packages/User"
 	],
 	"file_history":
 	[
+		"/home/demis/.config/sublime-text-3/Packages/User/Themes/Tuzk/images/overlay/overlay.svg",
+		"/home/demis/.config/sublime-text-3/Packages/User/Themes/Materia/Materia.gutter-theme",
+		"/home/demis/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/demis/backupmonokaipro",
+		"/home/demis/.config/sublime-text-3/Packages/User/Themes/Materia/Materia.sublime-theme",
+		"/home/demis/.config/sublime-text-3/Packages/User/GitGutter.sublime-settings",
+		"/home/demis/.config/sublime-text-3/Packages/User/Themes/MochaDark/git/MochaDark.gitgutter-theme",
+		"/home/demis/.config/sublime-text-3/Packages/User/SublimeLinter.sublime-settings",
+		"/home/demis/.config/sublime-text-3/Packages/User/Themes/MochaDark/MochaDark.sublime-theme",
+		"/home/demis/.config/sublime-text-3/Packages/User/Themes/Tuzk/Tuzk.gitgutter-theme",
+		"/home/demis/.config/sublime-text-3/Packages/User/Themes/MochaDark/MochaDark.gitgutter-theme",
+		"/home/demis/.config/sublime-text-3/Packages/User/Themes/Tuzk/git/Monokai Pro.gitgutter-theme",
+		"/home/demis/.config/sublime-text-3/Packages/User/Themes/Tuzk/Tuzk.gutter-theme",
+		"/home/demis/.config/sublime-text-3/Packages/User/Package Control.sublime-settings",
+		"/home/demis/.config/sublime-text-3/Packages/User/Themes/MochaDark/file_types/file_type_angular.tmPreferences",
+		"/home/demis/.config/sublime-text-3/Packages/Package Control/Default.sublime-commands",
+		"/home/demis/.config/sublime-text-3/Packages/User/Widget.sublime-settings",
+		"/home/demis/.config/sublime-text-3/Packages/User/Themes/MochaDark/MochaDark.tmTheme",
+		"/home/demis/.config/sublime-text-3/Packages/User/Themes/awesometest/awesometest.sublime-theme",
+		"/home/demis/.config/sublime-text-3/Packages/User/Themes/MochaDark/Widget.stTheme",
+		"/home/demis/.config/sublime-text-3/Cache/User/Themes/awesometest.tmTheme.cache",
+		"/home/demis/.config/sublime-text-3/Packages/Theme - Monokai Pro/Widget - Monokai Pro (Filter Ristretto).stTheme",
+		"/home/demis/.config/sublime-text-3/Packages/User/Themes/awesometest.tmTheme",
+		"/home/demis/.config/sublime-text-3/Packages/User/Theme - Monokai Pro/Monokai Pro (Filter Machine).sublime-theme",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/overlay/overlay.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/footer/input_field.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/footer/panel_background.svg",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/footer/status_bar_background.svg",
+		"/home/demis/.config/sublime-text-3/Packages/User/Themes/awesometest.sublime-theme",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Widget.stTheme",
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Widget.sublime-settings",
+		"/home/demis/.config/sublime-text-3/Packages/awesometest/Widget - awesometest.sublime-settings",
+		"/home/demis/.config/sublime-text-3/Packages/User/Themes/Widget.sublime-settings",
+		"/home/demis/.config/sublime-text-3/Packages/awesometest/Widget.stTheme",
 		"/home/demis/.config/sublime-text-3/Packages/User/test/images/footer/find_buffer.svg",
 		"/home/demis/.config/sublime-text-3/Packages/User/test/images/default/fold.svg",
 		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/default/fold.svg",
@@ -227,7 +303,6 @@
 		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/footer/find_whole_word_select.svg",
 		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/footer/find_wrap.svg",
 		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/footer/find_wrap_select.svg",
-		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/footer/input_field.svg",
 		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/footer/more.svg",
 		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/tabs/more.svg",
 		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/footer/more_hover.svg",
@@ -240,10 +315,8 @@
 		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/tabs/tab_hover.svg",
 		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/tabs/tabset_background.svg",
 		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/tabs/tab_current_2.svg",
-		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/footer/panel_background.svg",
 		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/footer/replace_preserve_case.svg",
 		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/footer/replace_preserve_case_select.svg",
-		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/footer/status_bar_background.svg",
 		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/gutter/arrow_down.svg",
 		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/sidebar/arrow_down.svg",
 		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/gutter/arrow_down_hover.svg",
@@ -261,7 +334,6 @@
 		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/sidebar/folder_dup.svg",
 		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/sidebar/folder_dup_hover.svg",
 		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/sidebar/folder_loading.svg",
-		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/overlay/overlay.svg",
 		"/home/demis/.config/sublime-text-3/Packages/Tuzk/images/scrollbar/scroll_puck.svg",
 		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/tabs/tabset_background.svg",
 		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/tabs/tab_hover.svg",
@@ -303,45 +375,15 @@
 		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/sidebar/arrow_right.svg",
 		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/gutter/arrow_right_hover.svg",
 		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/sidebar/arrow_right_hover.svg",
-		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/sidebar/close.svg",
-		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/tabs/close.svg",
-		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/sidebar/close_hover.svg",
-		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/tabs/close_hover.svg",
-		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/sidebar/dirty.svg",
-		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/tabs/dirty.svg",
-		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/sidebar/folder_dup.svg",
-		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/sidebar/folder_dup_hover.svg",
-		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/overlay/overlay.svg",
-		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/scrollbar/scroll_puck.svg",
-		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/sidebar/folder_loading.svg",
-		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/tabs/tab_current_2.svg",
-		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/footer/find_whole_word_select",
-		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/footer/find_whole_world_select.svg",
-		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/sidebar/folder_loading#.svg",
-		"/home/demis/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
-		"/home/demis/.config/sublime-text-3/Packages/User/Themes/test.sublime-theme",
-		"/home/demis/builds/i3-monokai/files/.config/i3/config",
-		"/home/demis/.config/sublime-text-3/Packages/Theme - Monokai Pro/Monokai Classic.tmTheme",
-		"/home/demis/builds/i3-monokai/files/.config/rofi/menu.rasi",
-		"/home/demis/builds/i3-monokai/files/.zshrc",
-		"/home/demis/builds/i3-monokai/files/.Xresources",
-		"/home/demis/builds/i3-monokai/files/.config/polybar/config",
-		"/home/demis/builds/i3-monokai/files/.config/polybar/global",
-		"/home/demis/builds/i3-monokai/install.sh",
-		"/home/demis/builds/i3-monokai/files/.config/lemonbar/time.sh",
-		"/home/demis/builds/i3-monokai/files/.config/rofi/spotlight.rasi",
-		"/home/demis/.config/sublime-text-3/Packages/User/Package Control.sublime-settings",
-		"/home/demis/builds/i3-monokai/.gitignore",
-		"/home/demis/builds/i3-monokai/files/.config/scripts/23-xres-sublime.sh",
-		"/home/demis/test.sh"
+		"/home/demis/.config/sublime-text-3/Packages/Tuzk/Monokai_Pro/sidebar/close.svg"
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 52.0
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 132.0,
 		"where_history":
 		[
 		]
@@ -351,6 +393,34 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"font.size",
+			"\"false\"",
+			"\"true\"",
+			"true",
+			"sidebar_label",
+			"sidebar",
+			"monokai_pro_small_scrollbar",
+			"monokai",
+			"puck_control",
+			"scroll",
+			"mono",
+			"monokai",
+			"sidebar",
+			"side",
+			"sidebar",
+			"side",
+			"sidebar",
+			"%%",
+			"34",
+			"%%",
+			"#f9cc6c",
+			"#a8a9eb",
+			"#fd6883",
+			"#5b5353",
+			"#fff1f3",
+			"#403838",
+			"overlay",
+			"arrow_right",
 			"#000000",
 			"%%grey-bright%%",
 			"#000000",
@@ -423,6 +493,12 @@
 		"regex": false,
 		"replace_history":
 		[
+			"%%yellow%%",
+			"%%purple%%",
+			"%%red%%",
+			"%%grey%%",
+			"%%fg%%",
+			"%%grey-dark%%",
 			"%%grey%%",
 			"%%contrast-darker%%",
 			"%%accent%%",
@@ -526,212 +602,19 @@
 		"show_context": true,
 		"use_buffer2": true,
 		"whole_word": false,
-		"wrap": true
+		"wrap": false
 	},
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "/home/demis/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 978,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								978,
-								978
-							]
-						],
-						"settings":
-						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.clone": -1,
-							"bracket_highlighter.clone_locations":
-							{
-								"close":
-								{
-									"1":
-									[
-										976,
-										977
-									]
-								},
-								"icon":
-								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/curly_bracket.png",
-										"region.purplish"
-									]
-								},
-								"open":
-								{
-									"1":
-									[
-										0,
-										1
-									]
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.clone_regions":
-							[
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content"
-							],
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content"
-							],
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 27.0
+		"height": 26.0
 	},
 	"input":
 	{
@@ -768,11 +651,15 @@
 	{
 		"height": 0.0
 	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
 	"pinned_build_system": "",
 	"project": "Sublime Text.sublime-project",
 	"replace":
 	{
-		"height": 50.0
+		"height": 48.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -782,12 +669,24 @@
 		"selected_items":
 		[
 			[
-				"i3con",
-				"files/.config/i3/config"
+				"mocha",
+				"Packages/User/Themes/MochaDark/MochaDark.sublime-theme"
 			],
 			[
 				"",
-				"~/.config/sublime-text-3/Packages/User/Preferences.sublime-settings"
+				"Packages/User/Preferences.sublime-settings"
+			],
+			[
+				"awesometest",
+				"Cache/User/Themes/awesometest.tmTheme.cache"
+			],
+			[
+				"pref",
+				"Packages/User/Preferences.sublime-settings"
+			],
+			[
+				"i3con",
+				"files/.config/i3/config"
 			],
 			[
 				"scripts/",
@@ -886,7 +785,7 @@
 	"show_open_files": true,
 	"show_tabs": false,
 	"side_bar_visible": true,
-	"side_bar_width": 350.0,
+	"side_bar_width": 321.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

@@ -20,8 +20,8 @@
     purple: %%purple%%;
     orange: %%orange%%;
     cyan: %%cyan%%;
-    accent: %%accent-shade%%;
-    highlight: bold %%yellow%%;
+    accent: %%grey-dark%%;
+    highlight: bold %%accent-color%%;
     font-rofi: "%%font%% %%fontsize_sm%%";
     mono-rofi: "%%font2%% %%fontsize_md%%";
 }

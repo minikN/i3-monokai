@@ -4,5 +4,5 @@
 ## variable below will be empty. Just add the path to the file after a whitespace, or comment
 ## it out entirely if you don't want to copy anything.
 
-target /home/demis/.config/Xresources/COLORS
+target ~/.config/Xresources/COLORS
 mode    hex,rgb

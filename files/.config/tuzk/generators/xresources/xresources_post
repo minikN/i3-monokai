@@ -6,7 +6,6 @@
 # use for the lifetime of the script.
 
 xrdb -load $HOME/.Xresources
-tuzk -r green
 
 for file in /dev/pts/[0-9]*; do
     echo -e -n "\033]4;0;$(tuzk -r bg)\033\\\\" > $file
@@ -35,5 +34,3 @@ for file in /dev/pts/[0-9]*; do
     echo -e -n "\033]4;256;$(tuzk -r fg)\033\\\\" > $file
     echo -e -n "\033]4;257;$(tuzk -r bg)\033\\\\" > $file
 done
-
-i3-msg restart

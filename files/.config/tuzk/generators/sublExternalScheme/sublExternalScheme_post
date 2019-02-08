@@ -7,7 +7,12 @@
 
 THEME="$(tuzk --current)"
 SUBL_SETTINGS="Preferences.sublime-settings"
-PKGCTL_DIR=~/.config/sublime-text-3/Packages/User
+PKGCTL_DIR=$HOME/.config/sublime-text-3/Packages/User
 
-mv "$PKGCTL_DIR/Themes/Tuzk.tmTheme" "$PKGCTL_DIR/Themes/$THEME.tmTheme"
-sed -i --follow-symlinks "/color_scheme/c\\\"color_scheme\": \"Packages/User/Themes/$THEME.tmTheme\"," "$PKGCTL_DIR/$SUBL_SETTINGS"
+if [[ ! -d "$PKGCTL_DIR/Themes/$THEME" ]]; then
+    mkdir -p "$PKGCTL_DIR/Themes/$THEME"
+fi
+
+mv "$PKGCTL_DIR/Themes/Tuzk.tmTheme" "$PKGCTL_DIR/Themes/$THEME/$THEME.tmTheme"
+sed -i --follow-symlinks "/color_scheme/c\\\"color_scheme\": \"Packages/User/Themes/$THEME/$THEME.tmTheme\"," "$PKGCTL_DIR/$SUBL_SETTINGS"
+

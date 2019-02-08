@@ -8,6 +8,7 @@
 		"AdvancedNewFile",
 		"BracketHighlighter",
 		"Color Highlighter",
+		"GitGutter",
 		"i3 wm",
 		"LiveReload",
 		"MarkdownPreview",
@@ -21,6 +22,7 @@
 		"Snippet Destroyer",
 		"SnippetMaker",
 		"SublimeLinter",
-		"SublimeLinter-php"
+		"SublimeLinter-php",
+		"Theme - Monokai Pro"
 	]
 }

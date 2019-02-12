@@ -14,12 +14,11 @@
 declare -a FILES=(
 	".xinitrc"
 	".Xresources"
-	".zshrc"
+	".bashrc"
 	".vimrc"
 	".vim"
     ".config/.phpcsfixer"
 	".config/polybar"
-	".config/lemonbar"
 	".config/i3"
 	".config/tuzk"
 	".config/backgrounds"

@@ -25,7 +25,7 @@
 ! -------------- TERMINAL --------------
 st.termname:     			st-256color
 st.title:					TERMINAL
-st.shell:        			/bin/zsh
+st.shell:        			/bin/bash
 st.font:              		FONT_STRING
 st.font-mono:				MONO_STRING
 st.borderpx:          		10

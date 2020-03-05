@@ -1,6 +1,8 @@
 # Yairs
 ![alt text](notes/1.png "Yairs")
 
+This repo is deprecated. I don't use it anymore.
+
 **Yairs** [(Y)et (a)nother (i)3 (r)ice (s)etup] is what I call my dotfiles repository. It is a working process - basically it will probably never be finished. However, everone is welcome to use it fully or partially.
 yairs is a i3 setup using bitmap fonts based around the [Monokai Pro](https://www.monokai.pro) colour palette created by [Wimer Hazenberg](https://www.monokai.nl).
 
